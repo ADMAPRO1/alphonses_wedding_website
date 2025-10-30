@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphonse & Janviere | November 2025</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Config for high-end, WARM luxurious colors and fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // LUXURY WARM COLORS: Deep Plum/Burgundy and Copper Gold
+                        'primary-accent': '#FFC371', // Rich Gold/Copper (The highlight color)
+                        'dark-bg': '#4C1F37', // Deep Plum/Burgundy (Main background)
+                        'cream-text': '#FBF8F1', // Soft Cream (Main text color)
+                        'secondary-dark': '#733F62', // Muted Rosewood/Mauve (Slightly lighter dark background for cards)
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        script: ['Dancing Script', 'cursive'],
+                    },
+                    keyframes: {
+                        'fade-in-up': {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fade-in-up 0.6s ease-out forwards',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Load Google Fonts (Montserrat for body, Playfair Display for headers/names) -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply the deep plum background to the body */
+        body {
+            background-color: #4C1F37;
+            color: #FBF8F1;
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Style for the main names */
+        .couple-name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 3rem; 
+            line-height: 1;
+            letter-spacing: 0.1em;
+            text-shadow: 0 0 10px rgba(255, 195, 113, 0.6); /* Soft glow from new accent color */
+        }
+        @media (min-width: 768px) {
+            .couple-name {
+                font-size: 5.5rem;
+            }
+        }
+
+        /* Hero Section with Parallax/Fixed Background Effect */
+        #hero-section {
+            background-image: url('uploaded:WhatsApp Image 2025-10-24 at 13.42.54_f5951ff1.jpg-ffc3720a-c004-42f7-ba91-94456f2d0fea');
+            background-attachment: fixed; /* Parallax effect */
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: multiply; 
+            background-color: rgba(76, 31, 55, 0.8); /* Dark overlay from dark-bg color (Deep Plum) */
+            position: relative;
+        }
+
+        /* Card Hover Effect */
+        .event-card, .contact-card {
+            transition: all 0.3s ease-in-out;
+        }
+        .event-card:hover, .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-color: #FFC371; /* New accent color border */
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Fixed Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 bg-dark-bg/95 backdrop-blur-sm shadow-xl z-50 p-4">
+        <div class="max-w-7xl mx-auto flex justify-center space-x-3 md:space-x-8 text-sm md:text-base">
+            <a href="#hero-section" class="text-primary-accent hover:text-cream-text transition duration-300 font-semibold uppercase tracking-widest">Home</a>
+            <a href="#events" class="text-primary-accent hover:text-cream-text transition duration-300 font-semibold uppercase tracking-widest">Schedule</a>
+            <a href="#story" class="text-primary-accent hover:text-cream-text transition duration-300 font-semibold uppercase tracking-widest">Our Story</a>
+            <a href="#gallery" class="text-primary-accent hover:text-cream-text transition duration-300 font-semibold uppercase tracking-widest hidden sm:inline">Gallery</a>
+            <a href="#contact" class="text-primary-accent hover:text-cream-text transition duration-300 font-semibold uppercase tracking-widest">Support</a>
+            <a href="#invitation" class="text-primary-accent hover:text-cream-text transition duration-300 font-semibold uppercase tracking-widest">Invitation</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero-section" class="h-screen flex flex-col justify-center items-center text-center p-4 pt-20">
+        <p class="text-lg md:text-xl text-primary-accent mb-4 font-sans tracking-widest uppercase animate-fade-in-up" style="animation-delay: 0.2s;">We Are Getting Married!</p>
+        
+        <!-- NEW INLINE FEATURE IMAGE/DETAIL - Replace the 'src' attribute with your chosen photo code -->
+        <img 
+            src="uploaded:image_810b68.png-58e66218-bb03-4ca1-a787-56b2e68d62b0" 
+            alt="Wedding Detail Photo Placeholder" 
+            class="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full shadow-xl mb-6 border-4 border-primary-accent animate-fade-in-up" 
+            style="animation-delay: 0.3s;"
+            onerror="this.onerror=null; this.src='https://placehold.co/128x128/733F62/FFC371?text=A%26J';"
+        >
+
+        <h1 class="couple-name text-cream-text font-bold animate-fade-in-up" style="animation-delay: 0.4s;">
+            Alphonse <span class="text-primary-accent mx-2 md:mx-6 text-opacity-80">&</span> Janviere
+        </h1>
+        <div class="mt-8 animate-fade-in-up" style="animation-delay: 0.6s;">
+            <p class="text-md md:text-lg text-cream-text/90 font-serif italic max-w-xl mx-auto">
+                "I sought the Lord, and he heard me; he delivered me from all my fears." <br class="hidden md:inline"/>(Psalms 34:4)
+            </p>
+            <p class="text-5xl md:text-7xl font-serif font-bold mt-6 text-primary-accent">15 / 11 / 2025</p>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div id="countdown" class="mt-12 w-full max-w-xl bg-secondary-dark/70 backdrop-blur-sm p-6 rounded-2xl shadow-2xl border border-primary-accent/50 animate-fade-in-up" style="animation-delay: 0.8s;">
+            <p class="text-sm text-primary-accent uppercase tracking-wider mb-3 font-semibold">Countdown to Introduction Ceremony (9:00 AM)</p>
+            <div class="flex justify-between items-center text-center">
+                <div class="flex flex-col flex-1 mx-1">
+                    <span id="days" class="text-4xl md:text-5xl font-extrabold text-cream-text font-serif">00</span>
+                    <span class="text-sm md:text-base text-primary-accent uppercase tracking-wider mt-1">Days</span>
+                </div>
+                <div class="text-4xl text-primary-accent/50 font-extralight">:</div>
+                <div class="flex flex-col flex-1 mx-1">
+                    <span id="hours" class="text-4xl md:text-5xl font-extrabold text-cream-text font-serif">00</span>
+                    <span class="text-sm md:text-base text-primary-accent uppercase tracking-wider mt-1">Hours</span>
+                </div>
+                <div class="text-4xl text-primary-accent/50 font-extralight">:</div>
+                <div class="flex flex-col flex-1 mx-1">
+                    <span id="minutes" class="text-4xl md:text-5xl font-extrabold text-cream-text font-serif">00</span>
+                    <span class="text-sm md:text-base text-primary-accent uppercase tracking-wider mt-1">Minutes</span>
+                </div>
+                <div class="text-4xl text-primary-accent/50 font-extralight">:</div>
+                <div class="flex flex-col flex-1 mx-1">
+                    <span id="seconds" class="text-4xl md:text-5xl font-extrabold text-cream-text font-serif">00</span>
+                    <span class="text-sm md:text-base text-primary-accent uppercase tracking-wider mt-1">Seconds</span>
+                </div>
+            </div>
+        </div>
+        <a href="#events" class="mt-10 animate-bounce text-primary-accent hover:text-cream-text transition duration-300">
+            <!-- Chevron Down Icon -->
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </a>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-24 px-4 bg-secondary-dark/40">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-serif font-bold text-primary-accent mb-4">The Celebration Schedule</h2>
+            <p class="text-lg text-cream-text/90 max-w-2xl mx-auto">
+                Join us for a day of tradition, faith, and celebration as we begin our journey on **November 15, 2025**.
+            </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-10">
+            
+            <!-- Event 1: Introduction and Dowry Giving -->
+            <div class="event-card flex flex-col md:flex-row bg-secondary-dark rounded-xl shadow-2xl overflow-hidden border-l-4 border-primary-accent">
+                <div class="md:w-1/3 bg-primary-accent flex flex-col justify-center items-center p-6 text-dark-bg font-sans">
+                    <p class="text-md font-bold uppercase tracking-widest">Introduction & Dowry</p>
+                    <p class="text-4xl font-extrabold font-serif mt-2">9:00</p>
+                    <p class="text-lg font-semibold uppercase tracking-widest">AM</p>
+                </div>
+                <div class="md:w-2/3 p-8">
+                    <h3 class="text-3xl font-serif font-bold mb-3 text-cream-text">Gusaba no gukwa muri Ceremony 💍</h3>
+                    <p class="text-cream-text/80 mb-4">The traditional ceremony marking the official union of the two families.</p>
+                    <div class="flex items-center text-cream-text/90">
+                        <!-- Icon: Location (Gold/Accent Color) -->
+                        <svg class="w-6 h-6 mr-3 text-primary-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <p class="font-semibold text-lg">Saint Vincent Pallotti Gikondo (Merez I)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 2: Religious Wedding Ceremony -->
+            <div class="event-card flex flex-col md:flex-row bg-secondary-dark rounded-xl shadow-2xl overflow-hidden border-r-4 border-primary-accent">
+                <div class="md:w-2/3 p-8 order-2 md:order-1">
+                    <h3 class="text-3xl font-serif font-bold mb-3 text-cream-text">Religious Wedding Ceremony 🕊️</h3>
+                    <p class="text-cream-text/80 mb-4">The sacred moment we exchange vows and receive God's blessing.</p>
+                    <div class="flex items-center text-cream-text/90">
+                        <!-- Icon: Church -->
+                        <svg class="w-6 h-6 mr-3 text-primary-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1M5 21h14a2 2 0 002-2H3a2 2 0 002 2z"></path></svg>
+                        <p class="font-semibold text-lg">ADEPR Karugira (Gikondo)</p>
+                    </div>
+                </div>
+                <div class="md:w-1/3 bg-primary-accent flex flex-col justify-center items-center p-6 text-dark-bg font-sans order-1 md:order-2">
+                    <p class="text-md font-bold uppercase tracking-widest">Ceremony Starts</p>
+                    <p class="text-4xl font-extrabold font-serif mt-2">2:00</p>
+                    <p class="text-lg font-semibold uppercase tracking-widest">PM</p>
+                </div>
+            </div>
+            
+            <!-- Event 3: Reception -->
+            <div class="event-card flex flex-col md:flex-row bg-secondary-dark rounded-xl shadow-2xl overflow-hidden border-l-4 border-primary-accent">
+                <div class="md:w-1/3 bg-primary-accent flex flex-col justify-center items-center p-6 text-dark-bg font-sans">
+                    <p class="text-md font-bold uppercase tracking-widest">Reception</p>
+                    <p class="text-4xl font-extrabold font-serif mt-2">TBD</p>
+                    <p class="text-lg font-semibold uppercase tracking-widest">Time</p>
+                </div>
+                <div class="md:w-2/3 p-8">
+                    <h3 class="text-3xl font-serif font-bold mb-3 text-cream-text">Guests Hosted (Dinner & Celebration) 🎉</h3>
+                    <p class="text-cream-text/80 mb-4">Dinner and reception for all invited guests immediately following the church service.</p>
+                    <div class="flex items-center text-cream-text/90">
+                        <!-- Icon: Champagne Glasses -->
+                        <svg class="w-6 h-6 mr-3 text-primary-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.524 0-1.037.009-1.547.025C18.23 15.7 17 14.7 17 13.5v-1c0-1.2.99-2.2 2.453-2.07l1.547.054V7.5a2.5 2.5 0 00-5 0v3.454l-1.547-.054C13.99 10.3 13 11.3 13 12.5v1c0 1.2.99 2.2 2.453 2.07l1.547.054h.025c.51 0 1.023-.009 1.547-.025M12 19V7.5a2.5 2.5 0 00-5 0V19m7 0a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        <p class="font-semibold text-lg">Saint Vincent Pallotti Gikondo (Merez I)</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Our Journey Section (Story) -->
+    <section id="story" class="py-24 px-4 bg-dark-bg">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-serif font-bold text-primary-accent mb-4">Our Beautiful Story</h2>
+            <p class="text-lg text-cream-text/80 max-w-2xl mx-auto">
+                A story built on faith, patience, and a shared vision for the future.
+            </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-10 grid md:grid-cols-2 gap-8 text-center">
+            
+            <div class="contact-card p-8 rounded-xl shadow-2xl border border-primary-accent/50 bg-secondary-dark">
+                <h3 class="text-3xl font-serif font-bold text-primary-accent mb-3">Alphonse (The Planner)</h3>
+                <p class="text-cream-text/90 leading-relaxed">
+                    Alphonse, the gentle and supportive partner, is dedicated to building a solid, reliable foundation for their life together. His attention to detail ensures their journey is a beautiful, well-planned adventure.
+                </p>
+            </div>
+
+            <div class="contact-card p-8 rounded-xl shadow-2xl border border-primary-accent/50 bg-secondary-dark">
+                <h3 class="text-3xl font-serif font-bold text-primary-accent mb-3">Janviere (The Light)</h3>
+                <p class="text-cream-text/90 leading-relaxed">
+                    Janviere, the light of Alphonse's life, brings joy and warmth to every quiet moment. Her faith and excitement are contagious, ready to embark on a lifetime of shared dreams.
+                </p>
+            </div>
+            
+            <div class="md:col-span-2 text-center pt-4">
+                <h3 class="text-xl font-sans font-semibold text-cream-text mb-2">Our Scripture</h3>
+                <p class="text-primary-accent font-serif italic text-2xl">
+                    "Mutatanye nanjye guhimbaza Uwiteka dushyirane hejuru izina rye" (Zaburi 34:4)
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 px-4 bg-secondary-dark/40">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-serif font-bold text-primary-accent mb-4">A Look Back</h2>
+            <p class="text-lg text-cream-text/80 max-w-2xl mx-auto">
+                Our favorite moments leading up to the most important day.
+            </p>
+        </div>
+
+        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+            <!-- Image 1: Couple Photo - Large Feature -->
+            <div class="col-span-2 md:col-span-2 aspect-video overflow-hidden rounded-xl shadow-2xl border-2 border-primary-accent/50">
+                <img 
+                    src="uploaded:WhatsApp Image 2025-10-24 at 13.42.54_f5951ff1.jpg-ffc3720a-c004-42f7-ba91-94456f2d0fea" 
+                    alt="Alphonse and Janviere couple photo" 
+                    class="w-full h-full object-cover transition duration-500 hover:scale-105"
+                    onerror="this.onerror=null; this.src='https://placehold.co/800x450/733F62/FFC371?text=Our+Engagement+Photo';"
+    >
+            </div>
+            <!-- Placeholder Images (styled placeholders for elegance) -->
+            <div class="col-span-1 aspect-[3/4] overflow-hidden rounded-xl shadow-2xl border-2 border-primary-accent/50 bg-secondary-dark/50 hover:bg-secondary-dark transition">
+                <div class="w-full h-full flex flex-col items-center justify-center p-4">
+                    <span class="text-5xl font-serif text-primary-accent">A&J</span>
+                    <span class="text-sm text-cream-text/70 mt-2">First Date</span>
+                </div>
+            </div>
+            <div class="col-span-1 aspect-[3/4] overflow-hidden rounded-xl shadow-2xl border-2 border-primary-accent/50 bg-secondary-dark/50 hover:bg-secondary-dark transition">
+                <div class="w-full h-full flex flex-col items-center justify-center p-4">
+                    <span class="text-5xl font-serif text-primary-accent">2025</span>
+                    <span class="text-sm text-cream-text/70 mt-2">The Proposal</span>
+                </div>
+            </div>
+            <div class="col-span-1 aspect-square overflow-hidden rounded-xl shadow-2xl border-2 border-primary-accent/50 bg-secondary-dark/50 hover:bg-secondary-dark transition">
+                <div class="w-full h-full flex flex-col items-center justify-center p-4">
+                    <span class="text-5xl font-serif text-primary-accent">❤️</span>
+                    <span class="text-sm text-cream-text/70 mt-2">Family Blessing</span>
+                </div>
+            </div>
+            <div class="col-span-1 aspect-square overflow-hidden rounded-xl shadow-2xl border-2 border-primary-accent/50 bg-secondary-dark/50 hover:bg-secondary-dark transition">
+                <div class="w-full h-full flex flex-col items-center justify-center p-4">
+                    <span class="text-5xl font-serif text-primary-accent">J</span>
+                    <span class="text-sm text-cream-text/70 mt-2">Janviere's Day</span>
+                </div>
+            </div>
+            <div class="col-span-2 md:col-span-2 aspect-video overflow-hidden rounded-xl shadow-2xl border-2 border-primary-accent/50 bg-secondary-dark/50 hover:bg-secondary-dark transition">
+                <div class="w-full h-full flex items-center justify-center text-xl text-primary-accent/80 font-serif font-bold">More photos available soon!</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support/Contact Section (Mobile Money Details) -->
+    <section id="contact" class="py-24 px-4 bg-dark-bg">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-serif font-bold text-primary-accent mb-4">Support & Well Wishes</h2>
+                <p class="text-lg text-cream-text/80 max-w-2xl mx-auto">
+                    Kwifatanirwa natwe n'inkunga ikomeye! Your kindness and support are the greatest gifts.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                
+                <!-- Contact Info Card -->
+                <div class="contact-card p-8 rounded-2xl shadow-2xl border border-primary-accent/50 bg-secondary-dark">
+                    <h3 class="text-3xl font-serif font-bold text-cream-text mb-4">Contact Information</h3>
+                    
+                    <div class="flex flex-col space-y-5 mt-6">
+                        <div class="p-3 bg-dark-bg/50 rounded-lg">
+                            <p class="text-md font-semibold text-primary-accent mb-1 uppercase tracking-wider">Bride (Janviere)</p>
+                            <p class="text-xl font-bold text-cream-text">0784 677 049 / 0728 859 972</p>
+                        </div>
+                        <div class="p-3 bg-dark-bg/50 rounded-lg">
+                            <p class="text-md font-semibold text-primary-accent mb-1 uppercase tracking-wider">Groom (Alphonse)</p>
+                            <p class="text-xl font-bold text-cream-text">0794 525 165 / 0723 243 111</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Money Card -->
+                <div class="contact-card p-8 rounded-2xl shadow-2xl border border-primary-accent/50 bg-secondary-dark">
+                    <h3 class="text-3xl font-serif font-bold text-cream-text mb-4">Financial Support (RWF)</h3>
+                    <p class="text-cream-text/80 mb-6">You can send your blessing directly through the following Mobile Money numbers:</p>
+
+                    <div class="space-y-4">
+                        <!-- Janviere - MTN -->
+                        <div class="p-4 bg-dark-bg rounded-lg flex justify-between items-center">
+                            <div>
+                                <p class="text-sm text-primary-accent">Janviere (MTN)</p>
+                                <p class="text-xl font-bold text-cream-text">0784 677 049</p>
+                            </div>
+                            <button onclick="copyToClipboard('0784677049')" class="text-primary-accent hover:text-cream-text transition duration-200">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v10a2 2 0 002 2h2m0-14h8m-8 0V3a2 2 0 012-2h4a2 2 0 012 2v2m-6 4h6m-6 4h6m-6 4h6"></path></svg>
+                            </button>
+                        </div>
+                        <!-- Alphonse - MTN -->
+                        <div class="p-4 bg-dark-bg rounded-lg flex justify-between items-center">
+                            <div>
+                                <p class="text-sm text-primary-accent">Alphonse (MTN)</p>
+                                <p class="text-xl font-bold text-cream-text">0794 525 165</p>
+                            </div>
+                            <button onclick="copyToClipboard('0794525165')" class="text-primary-accent hover:text-cream-text transition duration-200">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v10a2 2 0 002 2h2m0-14h8m-8 0V3a2 2 0 012-2h4a2 2 0 012 2v2m-6 4h6m-6 4h6m-6 4h6"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-sm text-primary-accent/70 mt-4 italic">Thank you for your generosity!</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Invitation Section -->
+    <section id="invitation" class="py-24 px-4 bg-secondary-dark/40">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-serif font-bold text-primary-accent mb-4">The Official Invitation</h2>
+            <p class="text-lg text-cream-text/80 max-w-2xl mx-auto">
+                All the essential details for our special day on November 15, 2025.
+            </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto p-4 bg-secondary-dark rounded-2xl shadow-2xl border-2 border-primary-accent/50">
+            <!-- Using the newly uploaded invitation image -->
+            <img 
+                src="invitation.jpg" 
+                alt="Official invitation for Alphonse and Janviere's wedding" 
+                class="w-full h-auto object-contain rounded-lg shadow-xl"
+                onerror="this.onerror=null; this.src='https://placehold.co/800x1100/733F62/FFC371?text=Official+Invitation+Unavailable';"
+            >
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 bg-dark-bg text-primary-accent/80 text-sm">
+        <p class="font-serif text-lg">Alphonse & Janviere</p>
+        <p class="mt-2 text-xs uppercase tracking-widest">&copy; 2025 Wedding Website</p>
+    </footer>
+
+    <!-- Global Message Box (Replacement for alert) -->
+    <div id="message-box" class="fixed bottom-5 left-1/2 transform -translate-x-1/2 px-6 py-3 bg-primary-accent text-dark-bg rounded-lg shadow-2xl font-semibold opacity-0 transition-opacity duration-300 pointer-events-none z-50">
+        Message Here
+    </div>
+
+    <!-- JavaScript for Countdown Timer and Utility Functions -->
+    <script>
+        // Utility function to display a message instead of alert()
+        function showMessage(text) {
+            const msgBox = document.getElementById('message-box');
+            msgBox.textContent = text;
+            msgBox.classList.remove('opacity-0');
+            msgBox.classList.add('opacity-100');
+            setTimeout(() => {
+                msgBox.classList.remove('opacity-100');
+                msgBox.classList.add('opacity-0');
+            }, 3000);
+        }
+
+        // Utility function for copying text
+        function copyToClipboard(text) {
+            try {
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                textarea.style.position = 'fixed'; // Avoid scrolling
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showMessage(`Copied phone number: ${text}`);
+            } catch (err) {
+                console.error('Failed to copy text', err);
+                showMessage('Failed to copy. Please manually select the text.');
+            }
+        }
+
+        // --- Countdown Timer Logic (Focus on Nov 15, 9:00 AM) ---
+        document.addEventListener('DOMContentLoaded', () => {
+            // Target the Introduction/Dowry Ceremony date and time: November 15, 2025 at 9:00 AM
+            const weddingDate = new Date("November 15, 2025 09:00:00").getTime();
+            const countdownElements = {
+                days: document.getElementById("days"),
+                hours: document.getElementById("hours"),
+                minutes: document.getElementById("minutes"),
+                seconds: document.getElementById("seconds"),
+                container: document.getElementById("countdown")
+            };
+
+            function updateCountdown() {
+                try {
+                    const now = new Date().getTime();
+                    const distance = weddingDate - now;
+
+                    // Time calculations
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    // Display the result
+                    countdownElements.days.innerHTML = String(days).padStart(2, '0');
+                    countdownElements.hours.innerHTML = String(hours).padStart(2, '0');
+                    countdownElements.minutes.innerHTML = String(minutes).padStart(2, '0');
+                    countdownElements.seconds.innerHTML = String(seconds).padStart(2, '0');
+
+                    // If the countdown is finished
+                    if (distance < 0) {
+                        clearInterval(x);
+                        countdownElements.container.innerHTML = '<p class="text-3xl font-serif text-primary-accent">The celebration is HERE! Welcome!</p>';
+                    }
+                } catch (error) {
+                    // Log error but display fallback text
+                    console.error("Error updating countdown:", error);
+                    clearInterval(x); // Stop interval if error occurs
+                    countdownElements.container.innerHTML = '<p class="text-2xl font-serif text-primary-accent">November 15, 2025</p>';
+                }
+            }
+
+            updateCountdown();
+            const x = setInterval(updateCountdown, 1000);
+        });
+
+    </script>
+</body>
+</html>
