@@ -1,942 +1,1402 @@
-<!DOCTYPE html>
+                         <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Wedding of Alphonse & Janviere</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Load Google Fonts for Cursive Heading and Body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
     <style>
-        /* Custom Tailwind Configuration and Fonts */
-        :root {
-            /* Deeper, richer colors for better elegance */
-            --color-blush-500: #FCE8E9; /* Very Light Blush */
-            --color-blush-700: #C2627E; /* Deeper Rosy Blush */
-            --color-gold-500: #D4AF37; /* Classic Gold */
-            --color-gold-700: #A67C00; /* Antique Gold */
-            --color-gold-glow: #FFD700; /* Bright Gold for glow */
-        }
+      /* Custom Tailwind Configuration and Fonts */
+      :root {
+        /* Deeper, richer colors for better elegance */
+        --color-blush-500: #fce8e9; /* Very Light Blush */
+        --color-blush-700: #c2627e; /* Deeper Rosy Blush */
+        --color-gold-500: #d4af37; /* Classic Gold */
+        --color-gold-700: #a67c00; /* Antique Gold */
+        --color-gold-glow: #ffd700; /* Bright Gold for glow */
+      }
 
-        /* Smooth scrolling for anchor links */
-        html {
-            scroll-behavior: smooth;
-        }
+      /* Smooth scrolling for anchor links */
+      html {
+        scroll-behavior: smooth;
+      }
 
-        .font-cursive { font-family: 'Great Vibes', cursive; }
-        .font-body { font-family: 'Inter', sans-serif; }
+      .font-cursive {
+        font-family: "Great Vibes", cursive;
+      }
+      .font-body {
+        font-family: "Inter", sans-serif;
+      }
 
-        .blush-bg { background-color: var(--color-blush-500); }
-        .blush-text { color: var(--color-blush-700); }
-        .gold-text { color: var(--color-gold-700); }
-        .light-gold-text { color: var(--color-gold-500); }
-        
-        /* Apply custom styles for the glowing button effect */
-        .glowing-button {
-            transition: all 0.3s ease;
-            box-shadow: 0 0 0.8rem rgba(194, 98, 126, 0.4); /* Subtle blush shadow */
-        }
-        .glowing-button:hover {
-            box-shadow: 0 0 1rem var(--color-gold-glow), 0 0 2rem rgba(194, 98, 126, 0.6);
-            transform: translateY(-3px) scale(1.02);
-        }
-        
-        /* Text Gradient for Names */
-        .gold-gradient-text {
-            background-image: linear-gradient(135deg, var(--color-gold-glow) 0%, var(--color-gold-700) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            color: transparent; /* Fallback */
-            filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
-        }
+      .blush-bg {
+        background-color: var(--color-blush-500);
+      }
+      .blush-text {
+        color: var(--color-blush-700);
+      }
+      .gold-text {
+        color: var(--color-gold-700);
+      }
+      .light-gold-text {
+        color: var(--color-gold-500);
+      }
 
-        /* Smooth Fade-In Animation */
-        .fade-in-element {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-            will-change: opacity, transform;
-        }
-        .fade-in-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+      /* Apply custom styles for the glowing button effect */
+      .glowing-button {
+        transition: all 0.3s ease;
+        box-shadow: 0 0 0.8rem rgba(194, 98, 126, 0.4); /* Subtle blush shadow */
+      }
+      .glowing-button:hover {
+        box-shadow: 0 0 1rem var(--color-gold-glow),
+          0 0 2rem rgba(194, 98, 126, 0.6);
+        transform: translateY(-3px) scale(1.02);
+      }
 
-        /* Gradient Background for Hero (Softer, more depth) */
-        #hero {
-            background: linear-gradient(160deg, #FFFFFF 0%, var(--color-blush-500) 40%, #FFFFFF 100%);
-            min-height: 100vh;
-            padding-top: 150px; /* Offset for fixed navigation */
-        }
+      /* Text Gradient for Names */
+      .gold-gradient-text {
+        background-image: linear-gradient(
+          135deg,
+          var(--color-gold-glow) 0%,
+          var(--color-gold-700) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent; /* Fallback */
+        filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+      }
 
-        /* Photo Banner Styling */
-        #photo-banner {
-            height: 30vh;
-            background-image: url('invitation.jpg'); /* Invitation Image */
-            background-size: cover;
-            background-position: center 60%;
-            position: relative;
-            z-index: 10;
-        }
+      /* Smooth Fade-In Animation */
+      .fade-in-element {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+        will-change: opacity, transform;
+      }
+      .fade-in-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-        /* Fixed Navigation Bar */
-        #main-nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 40;
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(5px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease-in-out;
-        }
-        
-        /* Floating Gift Button */
-        #gift-float {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            z-index: 50;
-            background-color: var(--color-gold-700);
-            box-shadow: 0 4px 15px rgba(166, 124, 0, 0.6);
-        }
+      /* Gradient Background for Hero (Softer, more depth) */
+      #hero {
+        background: linear-gradient(
+          160deg,
+          #ffffff 0%,
+          var(--color-blush-500) 40%,
+          #ffffff 100%
+        );
+        min-height: 100vh;
+        padding-top: 150px; /* Offset for fixed navigation */
+      }
+
+      /* Photo Banner Styling */
+      #photo-banner {
+        height: 30vh;
+        background-image: url("invitation.jpg"); /* Invitation Image */
+        background-size: cover;
+        background-position: center 60%;
+        position: relative;
+        z-index: 10;
+      }
+
+      /* Fixed Navigation Bar */
+      #main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 40;
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(5px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      /* Floating Gift Button */
+      #gift-float {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 50;
+        background-color: var(--color-gold-700);
+        box-shadow: 0 4px 15px rgba(166, 124, 0, 0.6);
+      }
     </style>
-</head>
-<body class="font-body text-gray-700 bg-white min-h-screen">
-
+  </head>
+  <body class="font-body text-gray-700 bg-white min-h-screen">
     <!-- Tailwind Configuration Setup -->
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'blush': {
-                            500: 'var(--color-blush-500)',
-                            700: 'var(--color-blush-700)',
-                        },
-                        'gold': {
-                            500: 'var(--color-gold-500)',
-                            700: 'var(--color-gold-700)',
-                            glow: 'var(--color-gold-glow)',
-                        }
-                    },
-                    fontFamily: {
-                        cursive: ['Great Vibes', 'cursive'],
-                        body: ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              blush: {
+                500: "var(--color-blush-500)",
+                700: "var(--color-blush-700)",
+              },
+              gold: {
+                500: "var(--color-gold-500)",
+                700: "var(--color-gold-700)",
+                glow: "var(--color-gold-glow)",
+              },
+            },
+            fontFamily: {
+              cursive: ["Great Vibes", "cursive"],
+              body: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
     </script>
-    
+
     <!-- NAVIGATION BAR -->
     <nav id="main-nav" class="py-4 px-6">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <!-- Logo/Names -->
-            <a href="#hero" class="text-2xl md:text-3xl font-cursive gold-gradient-text">A & J</a>
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <!-- Logo/Names -->
+        <a
+          href="#hero"
+          class="text-2xl md:text-3xl font-cursive gold-gradient-text"
+          >A & J</a
+        >
 
-            <!-- Menu Links -->
-            <div class="hidden lg:flex space-x-8">
-                <a href="#hero" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">Our Story</a>
-                <a href="#schedule" class="nav-link">Schedule</a>
-                <a href="#rsvp" class="nav-link">RSVP</a>
-                <a href="#guestbook" class="nav-link">Wishes</a>
-                <a href="#gallery" class="nav-link">Photos</a>
-                <a href="#contribution" class="nav-link">Contribute</a>
-            </div>
-
-            <!-- Floating Button for Mobile -->
-            <button id="mobile-menu-toggle" class="lg:hidden text-2xl gold-text">
-                <i class="fas fa-bars"></i>
-            </button>
+        <!-- Menu Links -->
+        <div class="hidden lg:flex space-x-8">
+          <a href="#hero" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">Our Story</a>
+          <a href="#schedule" class="nav-link">Schedule</a>
+          <a href="#rsvp" class="nav-link">RSVP</a>
+          <a href="#guestbook" class="nav-link">Wishes</a>
+          <a href="#gallery" class="nav-link">Photos</a>
+          <a href="#contribution" class="nav-link">Contribute</a>
         </div>
 
-        <!-- Mobile Menu (Slide-in Overlay from Right) -->
-        <div id="mobile-menu" class="fixed inset-0 z-30 transform translate-x-full transition-transform duration-300">
-            <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="closeMobileMenu()"></div>
-            <div class="relative bg-white/95 backdrop-blur-sm flex flex-col justify-center items-center space-y-8 w-full h-full ml-auto max-w-sm">
-                <button onclick="closeMobileMenu()" class="absolute top-4 right-4 text-3xl gold-text">&times;</button>
-                <a href="#hero" class="mobile-nav-link text-2xl" onclick="closeMobileMenu()">Home</a>
-                <a href="#about" class="mobile-nav-link text-2xl" onclick="closeMobileMenu()">Our Story</a>
-                <a href="#schedule" class="mobile-nav-link text-2xl" onclick="closeMobileMenu()">Schedule</a>
-                <a href="#rsvp" class="mobile-nav-link text-2xl" onclick="closeMobileMenu()">RSVP</a>
-                <a href="#guestbook" class="mobile-nav-link text-2xl" onclick="closeMobileMenu()">Wishes</a>
-                <a href="#gallery" class="mobile-nav-link text-2xl" onclick="closeMobileMenu()">Photos</a>
-                <a href="#contribution" class="mobile-nav-link text-2xl" onclick="closeMobileMenu()">Contribute</a>
-            </div>
+        <!-- Floating Button for Mobile -->
+        <button id="mobile-menu-toggle" class="lg:hidden text-2xl gold-text">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu (Slide-in Overlay from Right) -->
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 z-30 transform translate-x-full transition-transform duration-300"
+      >
+        <div
+          class="absolute inset-0 bg-black/50 backdrop-blur-sm"
+          onclick="closeMobileMenu()"
+        ></div>
+        <div
+          class="relative bg-white/95 backdrop-blur-sm flex flex-col justify-center items-center space-y-8 w-full h-full ml-auto max-w-sm"
+        >
+          <button
+            onclick="closeMobileMenu()"
+            class="absolute top-4 right-4 text-3xl gold-text"
+          >
+            &times;
+          </button>
+          <a
+            href="#hero"
+            class="mobile-nav-link text-2xl"
+            onclick="closeMobileMenu()"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="mobile-nav-link text-2xl"
+            onclick="closeMobileMenu()"
+            >Our Story</a
+          >
+          <a
+            href="#schedule"
+            class="mobile-nav-link text-2xl"
+            onclick="closeMobileMenu()"
+            >Schedule</a
+          >
+          <a
+            href="#rsvp"
+            class="mobile-nav-link text-2xl"
+            onclick="closeMobileMenu()"
+            >RSVP</a
+          >
+          <a
+            href="#guestbook"
+            class="mobile-nav-link text-2xl"
+            onclick="closeMobileMenu()"
+            >Wishes</a
+          >
+          <a
+            href="#gallery"
+            class="mobile-nav-link text-2xl"
+            onclick="closeMobileMenu()"
+            >Photos</a
+          >
+          <a
+            href="#contribution"
+            class="mobile-nav-link text-2xl"
+            onclick="closeMobileMenu()"
+            >Contribute</a
+          >
         </div>
+      </div>
     </nav>
 
     <!-- 1. HERO SECTION -->
-    <section id="hero" class="relative flex items-center justify-center text-center p-8">
-        <div class="max-w-4xl w-full p-8 md:p-16 rounded-[40px] bg-white/80 backdrop-blur-sm shadow-2xl shadow-blush-500/70 fade-in-element">
-            <img src="image1.jpg" alt="Alphonse and Janviere" class="w-80 h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] rounded-full mx-auto mb-8 shadow-2xl border-4 border-gold-500 fade-in-element object-cover">
-            <p class="text-xl md:text-2xl light-gold-text mb-4 font-semibold tracking-wider">The Beginning of Forever</p>
-            <h1 class="text-7xl md:text-10xl font-cursive blush-text my-4 md:my-8 leading-tight">
-                Alphonse
-                <span class="text-gray-500 text-6xl md:text-8xl">&</span>
-                <span class="gold-gradient-text text-7xl md:text-10xl">Janviere</span>
-            </h1>
-            <p class="text-2xl md:text-3xl font-light mb-8 text-gray-600">
-                <i class="far fa-calendar-alt mr-2 light-gold-text"></i> November 15, 2025 | Saint Vincent Pallotti Gikondo
-            </p>
-            
-            <!-- Countdown Timer -->
-            <div id="countdown" class="flex justify-center space-x-4 md:space-x-8 text-white">
-                <!-- Days -->
-                <div class="p-4 md:p-6 bg-blush-700 rounded-3xl shadow-xl transform hover:scale-105 transition duration-300">
-                    <div id="days" class="text-4xl md:text-6xl font-extrabold">00</div>
-                    <div class="text-sm md:text-lg mt-1 font-light">Days</div>
-                </div>
-                <!-- Hours -->
-                <div class="p-4 md:p-6 bg-blush-700 rounded-3xl shadow-xl transform hover:scale-105 transition duration-300">
-                    <div id="hours" class="text-4xl md:text-6xl font-extrabold">00</div>
-                    <div class="text-sm md:text-lg mt-1 font-light">Hours</div>
-                </div>
-                <!-- Minutes -->
-                <div class="p-4 md:p-6 bg-blush-700 rounded-3xl shadow-xl transform hover:scale-105 transition duration-300">
-                    <div id="minutes" class="text-4xl md:text-6xl font-extrabold">00</div>
-                    <div class="text-sm md:text-lg mt-1 font-light">Minutes</div>
-                </div>
-                <!-- Seconds -->
-                <div class="p-4 md:p-6 bg-blush-700 rounded-3xl shadow-xl transform hover:scale-105 transition duration-300">
-                    <div id="seconds" class="text-4xl md:text-6xl font-extrabold">00</div>
-                    <div class="text-sm md:text-lg mt-1 font-light">Seconds</div>
-                </div>
+    <section
+      id="hero"
+      class="relative flex items-center justify-center text-center p-8"
+    >
+      <div
+        class="max-w-4xl w-full p-8 md:p-16 rounded-[40px] bg-white/80 backdrop-blur-sm shadow-2xl shadow-blush-500/70 fade-in-element"
+      >
+        <img
+          src="image1.jpg"
+          alt="Alphonse and Janviere"
+          class="w-[40rem] h-[40rem] md:w-[48rem] md:h-[48rem] lg:w-[56rem] lg:h-[56rem] rounded-full mx-auto mb-8 shadow-2xl border-4 border-gold-500 fade-in-element object-cover"
+        />
+        <p
+          class="text-xl md:text-2xl light-gold-text mb-4 font-semibold tracking-wider"
+        >
+          The Beginning of Forever
+        </p>
+        <h1
+          class="text-7xl md:text-10xl font-cursive blush-text my-4 md:my-8 leading-tight"
+        >
+          Alphonse
+          <span class="text-gray-500 text-6xl md:text-8xl">&</span>
+          <span class="gold-gradient-text text-7xl md:text-10xl">Janviere</span>
+        </h1>
+        <p class="text-2xl md:text-3xl font-light mb-8 text-gray-600">
+          <i class="far fa-calendar-alt mr-2 light-gold-text"></i> November 15,
+          2025 | Saint Vincent Pallotti Gikondo
+        </p>
+
+        <!-- Countdown Timer -->
+        <div
+          id="countdown"
+          class="flex justify-center space-x-4 md:space-x-8 text-white"
+        >
+          <!-- Days -->
+          <div
+            class="p-4 md:p-6 bg-blush-700 rounded-3xl shadow-xl transform hover:scale-105 transition duration-300"
+          >
+            <div id="days" class="text-4xl md:text-6xl font-extrabold">00</div>
+            <div class="text-sm md:text-lg mt-1 font-light">Days</div>
+          </div>
+          <!-- Hours -->
+          <div
+            class="p-4 md:p-6 bg-blush-700 rounded-3xl shadow-xl transform hover:scale-105 transition duration-300"
+          >
+            <div id="hours" class="text-4xl md:text-6xl font-extrabold">00</div>
+            <div class="text-sm md:text-lg mt-1 font-light">Hours</div>
+          </div>
+          <!-- Minutes -->
+          <div
+            class="p-4 md:p-6 bg-blush-700 rounded-3xl shadow-xl transform hover:scale-105 transition duration-300"
+          >
+            <div id="minutes" class="text-4xl md:text-6xl font-extrabold">
+              00
             </div>
-            
-            <a href="#rsvp" class="mt-12 inline-block px-10 py-4 text-xl font-bold rounded-full bg-gold-700 text-white glowing-button shadow-2xl transition duration-500">
-                Secure Your Seat <i class="fas fa-ring ml-2"></i>
-            </a>
+            <div class="text-sm md:text-lg mt-1 font-light">Minutes</div>
+          </div>
+          <!-- Seconds -->
+          <div
+            class="p-4 md:p-6 bg-blush-700 rounded-3xl shadow-xl transform hover:scale-105 transition duration-300"
+          >
+            <div id="seconds" class="text-4xl md:text-6xl font-extrabold">
+              00
+            </div>
+            <div class="text-sm md:text-lg mt-1 font-light">Seconds</div>
+          </div>
         </div>
+
+        <a
+          href="#rsvp"
+          class="mt-12 inline-block px-10 py-4 text-xl font-bold rounded-full bg-gold-700 text-white glowing-button shadow-2xl transition duration-500"
+        >
+          RSVP Now <i class="fas fa-ring ml-2"></i>
+        </a>
+      </div>
     </section>
 
     <!-- Main Content Sections -->
     <main class="max-w-6xl mx-auto p-4 md:p-10">
-        
-        <!-- Helper function for section heading -->
-        <script>
-            function sectionHeading(title) {
-                return `
+      <!-- Helper function for section heading -->
+      <script>
+        function sectionHeading(title) {
+          return `
                     <h2 class="text-5xl md:text-6xl font-cursive blush-text text-center mb-4 fade-in-element">
                         ${title}
                     </h2>
                     <div class="w-32 h-1 bg-gold-500 mx-auto rounded-full mb-16 fade-in-element"></div>
                 `;
-            }
+        }
+      </script>
+
+      <!-- 2. ABOUT THE COUPLE -->
+      <section id="about" class="py-16 md:py-24">
+        <script>
+          document.write(sectionHeading("Our Love Story"));
         </script>
-
-        <!-- 2. ABOUT THE COUPLE -->
-        <section id="about" class="py-16 md:py-24">
-            <script>document.write(sectionHeading("Our Love Story"));</script>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <!-- Alphonse's Card -->
-                <div class="blush-bg p-10 rounded-[30px] shadow-2xl border-2 border-blush-700/20 fade-in-element">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-heart-circle-check text-4xl gold-text mr-4"></i>
-                        <h3 class="text-3xl font-cursive gold-text">Alphonse (The Planner)</h3>
-                    </div>
-                    <p class="text-lg leading-relaxed text-gray-700">
-                        Alphonse, the gentle and supportive partner, is dedicated to building a solid, reliable foundation for their life together. His attention to detail ensures their journey is a beautiful, well-planned adventure.
-                    </p>
-                </div>
-                <!-- Janviere's Card -->
-                <div class="blush-bg p-10 rounded-[30px] shadow-2xl border-2 border-blush-700/20 fade-in-element" style="transition-delay: 0.2s;">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-star text-4xl gold-text mr-4"></i>
-                        <h3 class="text-3xl font-cursive gold-text">Janviere (The Light)</h3>
-                    </div>
-                    <p class="text-lg leading-relaxed text-gray-700">
-                        Janviere, the light of Alphonse's life, brings joy and warmth to every quiet moment. Her faith and excitement are contagious, ready to embark on a lifetime of shared dreams.
-                    </p>
-                </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <!-- Alphonse's Card -->
+          <div
+            class="blush-bg p-10 rounded-[30px] shadow-2xl border-2 border-blush-700/20 fade-in-element"
+          >
+            <div class="flex items-center mb-4">
+              <i class="fas fa-heart-circle-check text-4xl gold-text mr-4"></i>
+              <h3 class="text-3xl font-cursive gold-text">
+                Alphonse (The Planner)
+              </h3>
             </div>
-
-            <div class="md:col-span-2 text-center pt-4">
-                <h3 class="text-xl font-sans font-semibold text-gray-700 mb-2">Our Scripture</h3>
-                <p class="text-gold-700 font-serif italic text-2xl">
-                    "Mutatanye nanjye guhimbaza Uwiteka dushyirane hejuru izina rye" (Zaburi 34:4)
-                </p>
-            </div>
-        </section>
-
-        <!-- 3. WEDDING SCHEDULE -->
-        <section id="schedule" class="py-16 md:py-24">
-            <script>document.write(sectionHeading("The Celebration Day"));</script>
-            <div class="relative max-w-2xl mx-auto">
-                <!-- Timeline Line -->
-                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-blush-700/30 hidden md:block rounded-full"></div>
-                
-                <!-- Timeline Events -->
-                <div class="space-y-16">
-                    <!-- Event 1 -->
-                    <div class="flex flex-col md:flex-row items-center md:items-start fade-in-element">
-                        <div class="md:w-1/2 p-4 text-center md:text-right">
-                            <h4 class="text-3xl font-semibold gold-text font-cursive">Introduction & Dowry</h4>
-                            <p class="text-lg text-gray-600">Saint Vincent Pallotti Gikondo (Merez I)</p>
-                        </div>
-                        <div class="w-10 h-10 rounded-full bg-gold-700 border-6 border-white shadow-xl flex-shrink-0 -mt-1 md:mt-0 md:mx-4 z-10 flex items-center justify-center text-white text-lg"><i class="fas fa-handshake"></i></div>
-                        <div class="md:w-1/2 p-6 text-center md:text-left blush-bg rounded-xl shadow-lg border border-blush-700/30 mt-4 md:mt-0">
-                            <p class="font-bold text-2xl blush-text">9:00 AM</p>
-                            <p class="text-sm">The traditional ceremony marking the official union of the two families.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Event 2 -->
-                    <div class="flex flex-col md:flex-row-reverse items-center md:items-start fade-in-element" style="transition-delay: 0.2s;">
-                        <div class="md:w-1/2 p-4 text-center md:text-left">
-                            <h4 class="text-3xl font-semibold gold-text font-cursive">Religious Wedding Ceremony</h4>
-                            <p class="text-lg text-gray-600">ADEPR Karugira (Gikondo)</p>
-                        </div>
-                        <div class="w-10 h-10 rounded-full bg-gold-700 border-6 border-white shadow-xl flex-shrink-0 -mt-1 md:mt-0 md:mx-4 z-10 flex items-center justify-center text-white text-lg"><i class="fas fa-church"></i></div>
-                        <div class="md:w-1/2 p-6 text-center md:text-right blush-bg rounded-xl shadow-lg border border-blush-700/30 mt-4 md:mt-0">
-                            <p class="font-bold text-2xl blush-text">2:00 PM</p>
-                            <p class="text-sm">The sacred moment we exchange vows and receive God's blessing.</p>
-                        </div>
-                    </div>
-
-                    <!-- Event 3 -->
-                    <div class="flex flex-col md:flex-row items-center md:items-start fade-in-element" style="transition-delay: 0.4s;">
-                        <div class="md:w-1/2 p-4 text-center md:text-right">
-                            <h4 class="text-3xl font-semibold gold-text font-cursive">Guests Hosted (Dinner & Celebration)</h4>
-                            <p class="text-lg text-gray-600">Saint Vincent Pallotti Gikondo (Merez I)</p>
-                        </div>
-                        <div class="w-10 h-10 rounded-full bg-gold-700 border-6 border-white shadow-xl flex-shrink-0 -mt-1 md:mt-0 md:mx-4 z-10 flex items-center justify-center text-white text-lg"><i class="fas fa-cake-candles"></i></div>
-                        <div class="md:w-1/2 p-6 text-center md:text-left blush-bg rounded-xl shadow-lg border border-blush-700/30 mt-4 md:mt-0">
-                            <p class="font-bold text-2xl blush-text">TBD</p>
-                            <p class="text-sm">Dinner and reception for all invited guests immediately following the church service.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. CONTRIBUTION / MOBILE MONEY FORM -->
-        <section id="contribution" class="py-16 md:py-24">
-            <script>document.write(sectionHeading("Contribute to Our Future 🎁"));</script>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-                
-                <!-- Donation Options Card -->
-                <div class="p-10 blush-bg rounded-[30px] shadow-2xl border-2 border-blush-700/20 fade-in-element">
-                    <h3 class="text-3xl font-cursive gold-text mb-4 text-center">Other Ways to Gift</h3>
-                    <p class="text-lg leading-relaxed text-gray-700 text-center mb-6">
-                        Your kindness is immensely appreciated. You may contribute directly using our secure Mobile Money details below.
-                    </p>
-                    
-                    <div class="space-y-4">
-                        <!-- Janviere - MTN -->
-                        <div class="w-full p-4 rounded-xl bg-white border border-gold-500 shadow-md">
-                            <p class="font-extrabold blush-text text-xl mb-2 flex items-center"><i class="fas fa-mobile-alt mr-2"></i> Janviere (MTN)</p>
-                            <p class="font-mono text-2xl text-center p-2 rounded-lg bg-blush-500/50 border border-blush-700/20">
-                                <span class="gold-text font-bold">0784 677 049</span> 
-                            </p>
-                            <button class="mt-2 text-sm text-blush-700 font-semibold hover:text-gold-700 transition" onclick="copyText('0784677049', 'mtnCopyMessage')">
-                                <i class="far fa-copy mr-1"></i> Click to Copy
-                            </button>
-                            <span id="mtnCopyMessage" class="ml-2 text-sm text-green-700 hidden">Copied!</span>
-                        </div>
-        
-                        <!-- Alphonse - MTN -->
-                        <div class="w-full p-4 rounded-xl bg-white border border-gold-500 shadow-md">
-                            <p class="font-extrabold blush-text text-xl mb-2 flex items-center"><i class="fas fa-mobile-alt mr-2"></i> Alphonse (MTN)</p>
-                            <p class="font-mono text-2xl text-center p-2 rounded-lg bg-blush-500/50 border border-blush-700/20">
-                                <span class="gold-text font-bold">0794 525 165</span> 
-                            </p>
-                            <button class="mt-2 text-sm text-blush-700 font-semibold hover:text-gold-700 transition" onclick="copyText('0794525165', 'airtelCopyMessage')">
-                                <i class="far fa-copy mr-1"></i> Click to Copy
-                            </button>
-                            <span id="airtelCopyMessage" class="ml-2 text-sm text-green-700 hidden">Copied!</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Interactive MoMo Form -->
-                <div class="p-10 bg-white rounded-[30px] shadow-2xl border-2 border-gold-500/30 fade-in-element" style="transition-delay: 0.2s;">
-                    <h3 class="text-4xl font-cursive blush-text mb-6 text-center">Quick MTN Transfer</h3>
-                    <p class="text-center text-sm text-gray-500 mb-6">This form simulates the steps for a secure MTN Mobile Money transfer.</p>
-                    
-                    <form id="mobileMoneyForm" class="space-y-6">
-                        <!-- Sender Name -->
-                        <div>
-                            <label for="senderName" class="block text-sm font-medium text-gray-700 mb-1">Your Name (for notification)</label>
-                            <input type="text" id="senderName" required placeholder="John Doe" class="w-full p-4 border border-blush-700/30 rounded-xl focus:ring-gold-500 focus:border-gold-500 transition duration-300 shadow-inner">
-                        </div>
-
-                        <!-- Amount Input -->
-                        <div>
-                            <label for="amount" class="block text-sm font-medium text-gray-700 mb-1">Amount (e.g., 50,000 RWF)</label>
-                            <div class="relative">
-                                <input type="number" id="amount" required min="1" placeholder="50000" class="w-full p-4 pl-16 border border-blush-700/30 rounded-xl focus:ring-gold-500 focus:border-gold-500 transition duration-300 shadow-inner">
-                                <span class="absolute left-0 top-0 bottom-0 flex items-center pl-4 text-lg font-bold blush-text">RWF</span>
-                            </div>
-                        </div>
-
-                        <!-- Simulated Dial Button -->
-                        <button type="submit" class="w-full mt-8 px-8 py-4 text-xl font-extrabold rounded-2xl bg-gold-700 text-white glowing-button shadow-gold-700/50 transition duration-500">
-                            <i class="fas fa-hand-holding-heart mr-2"></i> Dial & Send Gift
-                        </button>
-                    </form>
-                    
-                    <!-- Status/Message Box (Replaces alert()) -->
-                    <div id="momoStatus" class="mt-8 p-4 rounded-xl hidden text-center font-bold"></div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. RSVP FORM -->
-        <section id="rsvp" class="py-16 md:py-24">
-            <script>document.write(sectionHeading("Kindly RSVP"));</script>
-            <form id="rsvpForm" class="max-w-xl mx-auto p-10 bg-white rounded-[30px] shadow-2xl border border-blush-700/20 fade-in-element">
-                <p class="text-center text-lg mb-8 light-gold-text font-semibold">Please confirm your attendance by September 1st.</p>
-
-                <div class="space-y-6">
-                    <!-- Name -->
-                    <div>
-                        <label for="guestName" class="block text-sm font-medium text-gray-700 mb-1">Full Name(s)</label>
-                        <input type="text" id="guestName" required class="w-full p-4 border border-blush-700/30 rounded-xl focus:ring-gold-500 focus:border-gold-500 transition duration-300 shadow-inner">
-                    </div>
-                    
-                    <!-- Attendance -->
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Will you be attending?</label>
-                        <div class="flex space-x-6">
-                            <label class="inline-flex items-center p-3 blush-bg rounded-lg shadow-md hover:shadow-lg transition">
-                                <input type="radio" name="attendance" value="attending" required class="form-radio text-gold-700 h-5 w-5 border-blush-700/50 focus:ring-gold-500">
-                                <span class="ml-2 font-medium">Joyfully Attending</span>
-                            </label>
-                            <label class="inline-flex items-center p-3 blush-bg rounded-lg shadow-md hover:shadow-lg transition">
-                                <input type="radio" name="attendance" value="regret" class="form-radio text-gold-700 h-5 w-5 border-blush-700/50 focus:ring-gold-500">
-                                <span class="ml-2 font-medium">Regretfully Declining</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Guest Count -->
-                    <div>
-                        <label for="guestCount" class="block text-sm font-medium text-gray-700 mb-1">Number of Guests (including yourself)</label>
-                        <select id="guestCount" required class="w-full p-4 border border-blush-700/30 rounded-xl focus:ring-gold-500 focus:border-gold-500 transition duration-300 shadow-inner appearance-none">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
-                    </div>
-
-                    <!-- Dietary Notes -->
-                    <div>
-                        <label for="dietary" class="block text-sm font-medium text-gray-700 mb-1">Dietary Requirements/Notes (Optional)</label>
-                        <textarea id="dietary" rows="3" placeholder="e.g., Vegetarian, Gluten-free, etc." class="w-full p-4 border border-blush-700/30 rounded-xl focus:ring-gold-500 focus:border-gold-500 transition duration-300 shadow-inner"></textarea>
-                    </div>
-                </div>
-                
-                <button type="submit" class="w-full mt-8 px-8 py-4 text-xl font-extrabold rounded-2xl bg-blush-700 text-white glowing-button shadow-blush-700/50 transition duration-500">
-                    <i class="fas fa-envelope-open-text mr-2"></i> Submit RSVP
-                </button>
-                <div id="rsvpMessage" class="mt-4 text-center font-bold text-green-700 hidden"></div>
-            </form>
-        </section>
-
-        <!-- 6. GUESTBOOK -->
-        <section id="guestbook" class="py-16 md:py-24">
-            <script>document.write(sectionHeading("Guestbook of Wishes"));</script>
-            <div class="max-w-2xl mx-auto">
-                
-                <!-- Guestbook Form -->
-                <form id="guestbookForm" class="p-8 bg-white rounded-3xl shadow-2xl border border-blush-700/20 mb-12 fade-in-element">
-                    <p class="text-center text-xl mb-6 gold-text font-cursive">Leave a heartfelt message for the couple!</p>
-                    <input type="text" id="guestNameGB" placeholder="Your Name" required class="w-full p-3 border border-blush-700/30 rounded-xl mb-4 focus:ring-gold-500 focus:border-gold-500 shadow-inner">
-                    <textarea id="guestMessageGB" rows="4" placeholder="Your best wishes..." required class="w-full p-3 border border-blush-700/30 rounded-xl mb-6 focus:ring-gold-500 focus:border-gold-500 shadow-inner"></textarea>
-                    <button type="submit" class="w-full px-6 py-3 text-lg font-bold rounded-xl bg-gold-700 text-white glowing-button transition duration-500">
-                        Post Message <i class="fas fa-feather-pointed ml-2"></i>
-                    </button>
-                    <div id="guestbookMessage" class="mt-4 text-center font-bold text-green-700 hidden"></div>
-                </form>
-
-                <!-- Guestbook Messages List -->
-                <div id="messagesContainer" class="space-y-6 fade-in-element" style="transition-delay: 0.2s;">
-                    <div class="text-center p-4 text-gray-500">Loading messages...</div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- 7. PHOTO GALLERY -->
-        <section id="gallery" class="py-16 md:py-24">
-            <script>document.write(sectionHeading("Moments Together"));</script>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 fade-in-element">
-                <div class="relative overflow-hidden rounded-2xl shadow-xl aspect-square group border-4 border-blush-500">
-                    <img src="image1.jpg" alt="Couple Photo 1" class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100">
-                </div>
-                <div class="relative overflow-hidden rounded-2xl shadow-xl aspect-square group border-4 border-blush-500">
-                    <img src="image2.jpg" alt="Couple Photo 2" class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100">
-                </div>
-                <div class="relative overflow-hidden rounded-2xl shadow-xl aspect-square group border-4 border-blush-500">
-                    <img src="image3.jpg" alt="Couple Photo 3" class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100">
-                </div>
-                <div class="relative overflow-hidden rounded-2xl shadow-xl aspect-square group border-4 border-blush-500">
-                    <img src="image4.jpg" alt="Couple Photo 4" class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100">
-                </div>
-                <div class="relative overflow-hidden rounded-2xl shadow-xl aspect-square group border-4 border-blush-500">
-                    <img src="image5.jpg" alt="Couple Photo 5" class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100">
-                </div>
-                <div class="relative overflow-hidden rounded-2xl shadow-xl aspect-square group border-4 border-blush-500">
-                    <img src="image6.jpg" alt="Couple Photo 6" class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100">
-                </div>
-            </div>
-            <p class="text-center mt-12 text-2xl gold-text font-cursive font-semibold fade-in-element" style="transition-delay: 0.4s;">
-                A thousand memories in the making...
+            <p class="text-lg leading-relaxed text-gray-700">
+              Alphonse, the gentle and supportive partner, is dedicated to
+              building a solid, reliable foundation for their life together. His
+              attention to detail ensures their journey is a beautiful,
+              well-planned adventure.
             </p>
-        </section>
-
-        <!-- 8. CONTACT / VENUE -->
-        <section id="contact" class="py-16 md:py-24">
-            <script>document.write(sectionHeading("Venue & Contact Details"));</script>
-            <div class="max-w-3xl mx-auto p-10 blush-bg rounded-[30px] shadow-2xl text-center fade-in-element">
-                <h3 class="text-4xl font-cursive gold-text mb-4">Saint Vincent Pallotti Gikondo</h3>
-                <p class="text-xl mb-6 text-gray-800 font-light">
-                    Merez I, Kigali, Rwanda
-                </p>
-                <a href="#" target="_blank" class="text-blush-700 hover:gold-text font-bold text-lg underline transition duration-300 flex items-center justify-center">
-                    <i class="fas fa-map-location-dot mr-2"></i> View Map & Directions
-                </a>
-
-                <div class="mt-10 pt-8 border-t border-blush-700/50">
-                    <h4 class="text-2xl font-semibold mb-3 light-gold-text">Contact Information</h4>
-                    <div class="space-y-4">
-                        <div>
-                            <p class="text-lg font-semibold text-blush-700">Bride (Janviere)</p>
-                            <p class="text-xl font-bold text-gray-700">0784 677 049 / 0728 859 972</p>
-                        </div>
-                        <div>
-                            <p class="text-lg font-semibold text-blush-700">Groom (Alphonse)</p>
-                            <p class="text-xl font-bold text-gray-700">0794 525 165 / 0723 243 111</p>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <!-- Janviere's Card -->
+          <div
+            class="blush-bg p-10 rounded-[30px] shadow-2xl border-2 border-blush-700/20 fade-in-element"
+            style="transition-delay: 0.2s"
+          >
+            <div class="flex items-center mb-4">
+              <i class="fas fa-star text-4xl gold-text mr-4"></i>
+              <h3 class="text-3xl font-cursive gold-text">
+                Janviere (The Light)
+              </h3>
             </div>
-        </section>
-        
+            <p class="text-lg leading-relaxed text-gray-700">
+              Janviere, the light of Alphonse's life, brings joy and warmth to
+              every quiet moment. Her faith and excitement are contagious, ready
+              to embark on a lifetime of shared dreams.
+            </p>
+          </div>
+        </div>
+
+        <div class="md:col-span-2 text-center pt-4">
+          <h3 class="text-xl font-sans font-semibold text-gray-700 mb-2">
+            Our Scripture
+          </h3>
+          <p class="text-gold-700 font-serif italic text-2xl">
+            "Mutatanye nanjye guhimbaza Uwiteka dushyirane hejuru izina rye"
+            (Zaburi 34:4)
+          </p>
+        </div>
+      </section>
+
+      <!-- 3. WEDDING SCHEDULE -->
+      <section id="schedule" class="py-16 md:py-24">
+        <script>
+          document.write(sectionHeading("The Celebration Day"));
+        </script>
+        <div class="relative max-w-2xl mx-auto">
+          <!-- Timeline Line -->
+          <div
+            class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-blush-700/30 hidden md:block rounded-full"
+          ></div>
+
+          <!-- Timeline Events -->
+          <div class="space-y-16">
+            <!-- Event 1 -->
+            <div
+              class="flex flex-col md:flex-row items-center md:items-start fade-in-element"
+            >
+              <div class="md:w-1/2 p-4 text-center md:text-right">
+                <h4 class="text-3xl font-semibold gold-text font-cursive">
+                  Introduction & Dowry
+                </h4>
+                <p class="text-lg text-gray-600">
+                  Saint Vincent Pallotti Gikondo (Merez I)
+                </p>
+              </div>
+              <div
+                class="w-10 h-10 rounded-full bg-gold-700 border-6 border-white shadow-xl flex-shrink-0 -mt-1 md:mt-0 md:mx-4 z-10 flex items-center justify-center text-white text-lg"
+              >
+                <i class="fas fa-handshake"></i>
+              </div>
+              <div
+                class="md:w-1/2 p-6 text-center md:text-left blush-bg rounded-xl shadow-lg border border-blush-700/30 mt-4 md:mt-0"
+              >
+                <p class="font-bold text-2xl blush-text">9:00 AM</p>
+                <p class="text-sm">
+                  The traditional ceremony marking the official union of the two
+                  families.
+                </p>
+              </div>
+            </div>
+
+            <!-- Event 2 -->
+            <div
+              class="flex flex-col md:flex-row-reverse items-center md:items-start fade-in-element"
+              style="transition-delay: 0.2s"
+            >
+              <div class="md:w-1/2 p-4 text-center md:text-left">
+                <h4 class="text-3xl font-semibold gold-text font-cursive">
+                  Religious Wedding Ceremony
+                </h4>
+                <p class="text-lg text-gray-600">ADEPR Karugira (Gikondo)</p>
+              </div>
+              <div
+                class="w-10 h-10 rounded-full bg-gold-700 border-6 border-white shadow-xl flex-shrink-0 -mt-1 md:mt-0 md:mx-4 z-10 flex items-center justify-center text-white text-lg"
+              >
+                <i class="fas fa-church"></i>
+              </div>
+              <div
+                class="md:w-1/2 p-6 text-center md:text-right blush-bg rounded-xl shadow-lg border border-blush-700/30 mt-4 md:mt-0"
+              >
+                <p class="font-bold text-2xl blush-text">2:00 PM</p>
+                <p class="text-sm">
+                  The sacred moment we exchange vows and receive God's blessing.
+                </p>
+              </div>
+            </div>
+
+            <!-- Event 3 -->
+            <div
+              class="flex flex-col md:flex-row items-center md:items-start fade-in-element"
+              style="transition-delay: 0.4s"
+            >
+              <div class="md:w-1/2 p-4 text-center md:text-right">
+                <h4 class="text-3xl font-semibold gold-text font-cursive">
+                  Guests Hosted (Dinner & Celebration)
+                </h4>
+                <p class="text-lg text-gray-600">
+                  Saint Vincent Pallotti Gikondo (Merez I)
+                </p>
+              </div>
+              <div
+                class="w-10 h-10 rounded-full bg-gold-700 border-6 border-white shadow-xl flex-shrink-0 -mt-1 md:mt-0 md:mx-4 z-10 flex items-center justify-center text-white text-lg"
+              >
+                <i class="fas fa-cake-candles"></i>
+              </div>
+              <div
+                class="md:w-1/2 p-6 text-center md:text-left blush-bg rounded-xl shadow-lg border border-blush-700/30 mt-4 md:mt-0"
+              >
+                <p class="font-bold text-2xl blush-text">TBD</p>
+                <p class="text-sm">
+                  Dinner and reception for all invited guests immediately
+                  following the church service.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. CONTRIBUTION / MOBILE MONEY FORM -->
+      <section id="contribution" class="py-16 md:py-24">
+        <script>
+          document.write(sectionHeading("Contribute to Our Future 🎁"));
+        </script>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <!-- Donation Options Card -->
+          <div
+            class="p-10 blush-bg rounded-[30px] shadow-2xl border-2 border-blush-700/20 fade-in-element"
+          >
+            <h3 class="text-3xl font-cursive gold-text mb-4 text-center">
+              Other Ways to Gift
+            </h3>
+            <p class="text-lg leading-relaxed text-gray-700 text-center mb-6">
+              Your kindness is immensely appreciated. You may contribute
+              directly using our secure Mobile Money details below.
+            </p>
+
+            <div class="space-y-4">
+              <!-- Janviere - MTN -->
+              <div
+                class="w-full p-4 rounded-xl bg-white border border-gold-500 shadow-md"
+              >
+                <p
+                  class="font-extrabold blush-text text-xl mb-2 flex items-center"
+                >
+                  <i class="fas fa-mobile-alt mr-2"></i> Janviere (MTN)
+                </p>
+                <p
+                  class="font-mono text-2xl text-center p-2 rounded-lg bg-blush-500/50 border border-blush-700/20"
+                >
+                  <span class="gold-text font-bold">0784 677 049</span>
+                </p>
+                <button
+                  class="mt-2 text-sm text-blush-700 font-semibold hover:text-gold-700 transition"
+                  onclick="copyText('0784677049', 'mtnCopyMessage')"
+                >
+                  <i class="far fa-copy mr-1"></i> Click to Copy
+                </button>
+                <span
+                  id="mtnCopyMessage"
+                  class="ml-2 text-sm text-green-700 hidden"
+                  >Copied!</span
+                >
+              </div>
+
+              <!-- Alphonse - MTN -->
+              <div
+                class="w-full p-4 rounded-xl bg-white border border-gold-500 shadow-md"
+              >
+                <p
+                  class="font-extrabold blush-text text-xl mb-2 flex items-center"
+                >
+                  <i class="fas fa-mobile-alt mr-2"></i> Alphonse (MTN)
+                </p>
+                <p
+                  class="font-mono text-2xl text-center p-2 rounded-lg bg-blush-500/50 border border-blush-700/20"
+                >
+                  <span class="gold-text font-bold">0794 525 165</span>
+                </p>
+                <button
+                  class="mt-2 text-sm text-blush-700 font-semibold hover:text-gold-700 transition"
+                  onclick="copyText('0794525165', 'airtelCopyMessage')"
+                >
+                  <i class="far fa-copy mr-1"></i> Click to Copy
+                </button>
+                <span
+                  id="airtelCopyMessage"
+                  class="ml-2 text-sm text-green-700 hidden"
+                  >Copied!</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive MoMo Form -->
+          <div
+            class="p-10 bg-white rounded-[30px] shadow-2xl border-2 border-gold-500/30 fade-in-element"
+            style="transition-delay: 0.2s"
+          >
+            <h3 class="text-4xl font-cursive blush-text mb-6 text-center">
+              Quick MTN Transfer
+            </h3>
+            <p class="text-center text-sm text-gray-500 mb-6">
+              This form simulates the steps for a secure MTN Mobile Money
+              transfer.
+            </p>
+
+            <form id="mobileMoneyForm" class="space-y-6">
+              <!-- Sender Name -->
+              <div>
+                <label
+                  for="senderName"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Your Name (for notification)</label
+                >
+                <input
+                  type="text"
+                  id="senderName"
+                  required
+                  placeholder="John Doe"
+                  class="w-full p-4 border border-blush-700/30 rounded-xl focus:ring-gold-500 focus:border-gold-500 transition duration-300 shadow-inner"
+                />
+              </div>
+
+              <!-- Amount Input -->
+              <div>
+                <label
+                  for="amount"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Amount (e.g., 50,000 RWF)</label
+                >
+                <div class="relative">
+                  <input
+                    type="number"
+                    id="amount"
+                    required
+                    min="1"
+                    placeholder="50000"
+                    class="w-full p-4 pl-16 border border-blush-700/30 rounded-xl focus:ring-gold-500 focus:border-gold-500 transition duration-300 shadow-inner"
+                  />
+                  <span
+                    class="absolute left-0 top-0 bottom-0 flex items-center pl-4 text-lg font-bold blush-text"
+                    >RWF</span
+                  >
+                </div>
+              </div>
+
+              <!-- Recipient Selection -->
+              <div>
+                <label
+                  for="recipient"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Recipient</label
+                >
+                <select
+                  id="recipient"
+                  required
+                  class="w-full p-4 border border-blush-700/30 rounded-xl focus:ring-gold-500 focus:border-gold-500 transition duration-300 shadow-inner appearance-none"
+                >
+                  <option value="0784677049">Janviere (MTN)</option>
+                  <option value="0794525165">Alphonse (MTN)</option>
+                </select>
+              </div>
+
+              <!-- Simulated Dial Button -->
+              <button
+                type="submit"
+                class="w-full mt-8 px-8 py-4 text-xl font-extrabold rounded-2xl bg-gold-700 text-white glowing-button shadow-gold-700/50 transition duration-500"
+              >
+                <i class="fas fa-hand-holding-heart mr-2"></i> Dial & Send Gift
+              </button>
+            </form>
+
+            <!-- Status/Message Box (Replaces alert()) -->
+            <div
+              id="momoStatus"
+              class="mt-8 p-4 rounded-xl hidden text-center font-bold"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. RSVP FORM -->
+      <section id="rsvp" class="py-16 md:py-24">
+        <script>
+          document.write(sectionHeading("Kindly RSVP"));
+        </script>
+        <form
+          id="rsvpForm"
+          class="max-w-xl mx-auto p-10 bg-white rounded-[30px] shadow-2xl border border-blush-700/20 fade-in-element"
+        >
+          <p class="text-center text-lg mb-8 light-gold-text font-semibold">
+            Please confirm your attendance by September 1st.
+          </p>
+
+          <div class="space-y-6">
+            <!-- Name -->
+            <div>
+              <label
+                for="guestName"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Full Name(s)</label
+              >
+              <input
+                type="text"
+                id="guestName"
+                required
+                class="w-full p-4 border border-blush-700/30 rounded-xl focus:ring-gold-500 focus:border-gold-500 transition duration-300 shadow-inner"
+              />
+            </div>
+
+            <!-- Attendance -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2"
+                >Will you be attending?</label
+              >
+              <div class="flex space-x-6">
+                <label
+                  class="inline-flex items-center p-3 blush-bg rounded-lg shadow-md hover:shadow-lg transition"
+                >
+                  <input
+                    type="radio"
+                    name="attendance"
+                    value="attending"
+                    required
+                    class="form-radio text-gold-700 h-5 w-5 border-blush-700/50 focus:ring-gold-500"
+                  />
+                  <span class="ml-2 font-medium">Joyfully Attending</span>
+                </label>
+                <label
+                  class="inline-flex items-center p-3 blush-bg rounded-lg shadow-md hover:shadow-lg transition"
+                >
+                  <input
+                    type="radio"
+                    name="attendance"
+                    value="regret"
+                    class="form-radio text-gold-700 h-5 w-5 border-blush-700/50 focus:ring-gold-500"
+                  />
+                  <span class="ml-2 font-medium">Regretfully Declining</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Guest Count -->
+            <div>
+              <label
+                for="guestCount"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Number of Guests (including yourself)</label
+              >
+              <select
+                id="guestCount"
+                required
+                class="w-full p-4 border border-blush-700/30 rounded-xl focus:ring-gold-500 focus:border-gold-500 transition duration-300 shadow-inner appearance-none"
+              >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+
+            <!-- Dietary Notes -->
+            <div>
+              <label
+                for="dietary"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Dietary Requirements/Notes (Optional)</label
+              >
+              <textarea
+                id="dietary"
+                rows="3"
+                placeholder="e.g., Vegetarian, Gluten-free, etc."
+                class="w-full p-4 border border-blush-700/30 rounded-xl focus:ring-gold-500 focus:border-gold-500 transition duration-300 shadow-inner"
+              ></textarea>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full mt-8 px-8 py-4 text-xl font-extrabold rounded-2xl bg-blush-700 text-white glowing-button shadow-blush-700/50 transition duration-500"
+          >
+            <i class="fas fa-envelope-open-text mr-2"></i> Submit RSVP
+          </button>
+          <div
+            id="rsvpMessage"
+            class="mt-4 text-center font-bold text-green-700 hidden"
+          ></div>
+        </form>
+      </section>
+
+      <!-- 6. GUESTBOOK -->
+      <section id="guestbook" class="py-16 md:py-24">
+        <script>
+          document.write(sectionHeading("Guestbook of Wishes"));
+        </script>
+        <div class="max-w-2xl mx-auto">
+          <!-- Guestbook Form -->
+          <form
+            id="guestbookForm"
+            class="p-8 bg-white rounded-3xl shadow-2xl border border-blush-700/20 mb-12 fade-in-element"
+          >
+            <p class="text-center text-xl mb-6 gold-text font-cursive">
+              Leave a heartfelt message for the couple!
+            </p>
+            <input
+              type="text"
+              id="guestNameGB"
+              placeholder="Your Name"
+              required
+              class="w-full p-3 border border-blush-700/30 rounded-xl mb-4 focus:ring-gold-500 focus:border-gold-500 shadow-inner"
+            />
+            <textarea
+              id="guestMessageGB"
+              rows="4"
+              placeholder="Your best wishes..."
+              required
+              class="w-full p-3 border border-blush-700/30 rounded-xl mb-6 focus:ring-gold-500 focus:border-gold-500 shadow-inner"
+            ></textarea>
+            <button
+              type="submit"
+              class="w-full px-6 py-3 text-lg font-bold rounded-xl bg-gold-700 text-white glowing-button transition duration-500"
+            >
+              Post Message <i class="fas fa-feather-pointed ml-2"></i>
+            </button>
+            <div
+              id="guestbookMessage"
+              class="mt-4 text-center font-bold text-green-700 hidden"
+            ></div>
+          </form>
+        </div>
+      </section>
+      <!-- 7. PHOTO GALLERY -->
+      <section id="gallery" class="py-16 md:py-24">
+        <script>
+          document.write(sectionHeading("Moments Together"));
+        </script>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 fade-in-element">
+          <div
+            class="relative overflow-hidden rounded-2xl shadow-xl aspect-square group border-4 border-blush-500"
+          >
+            <img
+              src="image1.jpg"
+              alt="Couple Photo 1"
+              class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+            />
+          </div>
+          <div
+            class="relative overflow-hidden rounded-2xl shadow-xl aspect-square group border-4 border-blush-500"
+          >
+            <img
+              src="image2.jpg"
+              alt="Couple Photo 2"
+              class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+            />
+          </div>
+          <div
+            class="relative overflow-hidden rounded-2xl shadow-xl aspect-square group border-4 border-blush-500"
+          >
+            <img
+              src="image3.jpg"
+              alt="Couple Photo 3"
+              class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+            />
+          </div>
+          <div
+            class="relative overflow-hidden rounded-2xl shadow-xl aspect-square group border-4 border-blush-500"
+          >
+            <img
+              src="image4.jpg"
+              alt="Couple Photo 4"
+              class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+            />
+          </div>
+          <div
+            class="relative overflow-hidden rounded-2xl shadow-xl aspect-square group border-4 border-blush-500"
+          >
+            <img
+              src="image5.jpg"
+              alt="Couple Photo 5"
+              class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+            />
+          </div>
+          <div
+            class="relative overflow-hidden rounded-2xl shadow-xl aspect-square group border-4 border-blush-500"
+          >
+            <img
+              src="image6.jpg"
+              alt="Couple Photo 6"
+              class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+            />
+          </div>
+        </div>
+        <p
+          class="text-center mt-12 text-2xl gold-text font-cursive font-semibold fade-in-element"
+          style="transition-delay: 0.4s"
+        >
+          A thousand memories in the making...
+        </p>
+      </section>
+
+      <!-- 8. CONTACT / VENUE -->
+      <section id="contact" class="py-16 md:py-24">
+        <script>
+          document.write(sectionHeading("Venue & Contact Details"));
+        </script>
+        <div
+          class="max-w-4xl mx-auto p-10 blush-bg rounded-[30px] shadow-2xl text-center fade-in-element"
+        >
+          <h3 class="text-4xl font-cursive gold-text mb-4">
+            Saint Vincent Pallotti Gikondo
+          </h3>
+          <p class="text-xl mb-6 text-gray-800 font-light">
+            Merez I, Kigali, Rwanda
+          </p>
+
+          <!-- Google Maps Embed -->
+          <div
+            class="mb-8 rounded-2xl overflow-hidden shadow-xl border-4 border-gold-500/30"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.461134344584!2d30.07616502235131!3d-1.9696060999999967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca66e3e3d5921%3A0x3369c6c98a2f5d5a!2sParish%20Church%20of%20Saint%20Vincent%20Pallotti%20Gikondo!5e0!3m2!1sen!2srw!4v1761857134208!5m2!1sen!2srw"
+              width="450"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <div class="mt-10 pt-8 border-t border-blush-700/50">
+            <h4 class="text-2xl font-semibold mb-3 light-gold-text">
+              Contact Information
+            </h4>
+            <div class="space-y-4">
+              <div>
+                <p class="text-lg font-semibold text-blush-700">
+                  Bride (Janviere)
+                </p>
+                <p class="text-xl font-bold text-gray-700">- 0784 677 049</p>
+                <p class="text-xl font-bold text-gray-700">- 0728 859 972</p>
+              </div>
+              <div>
+                <p class="text-lg font-semibold text-blush-700">
+                  Groom (Alphonse)
+                </p>
+                <p class="text-xl font-bold text-gray-700">- 0794 525 165</p>
+                <p class="text-xl font-bold text-gray-700">- 0723 243 111</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    
+
+    <!-- FOOTER -->
+    <footer class="py-12 bg-blush-500/20 border-t border-blush-700/30">
+        <div class="max-w-6xl mx-auto px-4 md:px-10 text-center">
+            <p class="text-2xl font-cursive gold-text mb-4">Thank You for Being Part of Our Journey</p>
+            <p class="text-lg text-gray-700 mb-6">We are grateful for your love and support as we begin this new chapter together.</p>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#contribution" class="text-gold-700 hover:text-blush-700 transition duration-300">
+                    <i class="fas fa-gift text-2xl"></i>
+                </a>
+                <a href="#rsvp" class="text-gold-700 hover:text-blush-700 transition duration-300">
+                    <i class="fas fa-envelope text-2xl"></i>
+                </a>
+                <a href="#guestbook" class="text-gold-700 hover:text-blush-700 transition duration-300">
+                    <i class="fas fa-heart text-2xl"></i>
+                </a>
+            </div>
+            <p class="text-sm text-gray-600">&copy; 2025 Alphonse & Janviere. Made with love.</p>
+        </div>
+    </footer>
+
     <!-- Floating Gift Button (Remains) -->
-    <a href="#contribution" id="gift-float" class="px-7 py-4 text-xl font-bold rounded-full text-white glowing-button transition duration-500 hover:bg-gold-700/90">
-        Send Gift 💝
+    <a
+      href="#contribution"
+      id="gift-float"
+      class="px-7 py-4 text-xl font-bold rounded-full text-white glowing-button transition duration-500 hover:bg-gold-700/90"
+    >
+      Send Gift 💝
     </a>
 
     <!-- Styling for Nav Links and Mobile Menu -->
     <style>
-        .nav-link {
-            @apply text-lg font-medium text-gray-700 hover:text-blush-700 gold-text hover:shadow-lg transition duration-300 relative;
+      .nav-link {
+        @apply text-lg font-medium text-gray-700 hover:text-blush-700 gold-text hover:shadow-lg transition duration-300 relative;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--color-blush-700);
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      .mobile-nav-link {
+        @apply block text-center py-2 px-4 text-lg font-medium text-gray-700 hover:bg-blush-500 rounded-lg transition duration-300;
+      }
+
+      /* Mobile-specific optimizations for phones (max-width: 640px) */
+      @media (max-width: 640px) {
+        /* Reduce hero title size for small screens */
+        #hero h1 {
+          font-size: 3rem !important; /* Smaller than text-7xl (4.5rem) */
+          line-height: 1.1 !important;
         }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: var(--color-blush-700);
-            transition: width 0.3s ease;
+
+        /* Adjust hero padding for better fit */
+        #hero {
+          padding-top: 120px !important;
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
         }
-        .nav-link:hover::after {
-            width: 100%;
+
+        /* Smaller hero image for mobile to ensure circular display */
+        #hero img {
+          width: 20rem !important;
+          height: 20rem !important;
+        }
+
+        /* Smaller countdown boxes */
+        #countdown .p-4 {
+          padding: 0.75rem !important; /* Smaller padding */
+        }
+        #countdown .text-4xl {
+          font-size: 2rem !important; /* Smaller numbers */
+        }
+        #countdown .text-sm {
+          font-size: 0.75rem !important; /* Smaller labels */
+        }
+
+        /* Ensure mobile menu is fully touch-friendly */
+        #mobile-menu {
+          padding: 2rem 1rem !important; /* More padding */
         }
         .mobile-nav-link {
-            @apply block text-center py-2 px-4 text-lg font-medium text-gray-700 hover:bg-blush-500 rounded-lg transition duration-300;
+          padding: 0.75rem 1rem !important; /* Larger touch targets */
+          font-size: 1.125rem !important; /* Slightly larger text */
+          margin-bottom: 0.5rem !important; /* More space */
         }
 
-        /* Mobile-specific optimizations for phones (max-width: 640px) */
-        @media (max-width: 640px) {
-            /* Reduce hero title size for small screens */
-            #hero h1 {
-                font-size: 3rem !important; /* Smaller than text-7xl (4.5rem) */
-                line-height: 1.1 !important;
-            }
+        /* Adjust floating button for mobile */
+        #gift-float {
+          bottom: 1.5rem !important;
+          right: 1.5rem !important;
+          padding: 0.75rem 1.5rem !important; /* Larger touch target */
+          font-size: 1rem !important;
+        }
+      }
 
-            /* Adjust hero padding for better fit */
-            #hero {
-                padding-top: 120px !important;
-                padding-left: 1rem !important;
-                padding-right: 1rem !important;
-            }
-
-            /* Smaller countdown boxes */
-            #countdown .p-4 {
-                padding: 0.75rem !important; /* Smaller padding */
-            }
-            #countdown .text-4xl {
-                font-size: 2rem !important; /* Smaller numbers */
-            }
-            #countdown .text-sm {
-                font-size: 0.75rem !important; /* Smaller labels */
-            }
-
-            /* Ensure mobile menu is fully touch-friendly */
-            #mobile-menu {
-                padding: 2rem 1rem !important; /* More padding */
-            }
-            .mobile-nav-link {
-                padding: 0.75rem 1rem !important; /* Larger touch targets */
-                font-size: 1.125rem !important; /* Slightly larger text */
-                margin-bottom: 0.5rem !important; /* More space */
-            }
-
-            /* Adjust floating button for mobile */
-            #gift-float {
-                bottom: 1.5rem !important;
-                right: 1.5rem !important;
-                padding: 0.75rem 1.5rem !important; /* Larger touch target */
-                font-size: 1rem !important;
-            }
+      /* Additional tweaks for very small phones (max-width: 480px) */
+      @media (max-width: 480px) {
+        #hero h1 {
+          font-size: 2.5rem !important;
         }
 
-        /* Additional tweaks for very small phones (max-width: 480px) */
-        @media (max-width: 480px) {
-            #hero h1 {
-                font-size: 2.5rem !important;
-            }
-
-            #hero .text-xl {
-                font-size: 1.125rem !important;
-            }
-
-            #countdown .text-4xl {
-                font-size: 1.5rem !important;
-            }
-
-            .mobile-nav-link {
-                font-size: 1rem !important;
-            }
-
-            #gift-float {
-                font-size: 0.875rem !important;
-                padding: 0.5rem 1rem !important;
-            }
+        #hero .text-xl {
+          font-size: 1.125rem !important;
         }
+
+        #countdown .text-4xl {
+          font-size: 1.5rem !important;
+        }
+
+        .mobile-nav-link {
+          font-size: 1rem !important;
+        }
+
+        #gift-float {
+          font-size: 0.875rem !important;
+          padding: 0.5rem 1rem !important;
+        }
+      }
     </style>
 
     <!-- Firebase SDK Imports (MUST be imported as modules) -->
     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-        import { getFirestore, addDoc, onSnapshot, collection, query, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+      import {
+        getAuth,
+        signInAnonymously,
+        signInWithCustomToken,
+      } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+      import {
+        getFirestore,
+        addDoc,
+        onSnapshot,
+        collection,
+        query,
+        serverTimestamp,
+      } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-        // Global Firebase variables provided by the environment
-        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
-        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
-        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+      // Global Firebase variables provided by the environment
+      const appId =
+        typeof __app_id !== "undefined" ? __app_id : "default-app-id";
+      const firebaseConfig =
+        typeof __firebase_config !== "undefined"
+          ? JSON.parse(__firebase_config)
+          : null;
+      const initialAuthToken =
+        typeof __initial_auth_token !== "undefined"
+          ? __initial_auth_token
+          : null;
 
-        let db, auth, userId;
-        // Collection for public messages
-        const GUESTBOOK_COLLECTION_PATH = `/artifacts/${appId}/public/data/wedding_guestbook`;
+      let db, auth, userId;
+      // Collection for public messages
+      const GUESTBOOK_COLLECTION_PATH = `/artifacts/${appId}/public/data/wedding_guestbook`;
 
-        // ------------------------------------
-        // INITIALIZATION AND AUTHENTICATION
-        // ------------------------------------
+      // ------------------------------------
+      // INITIALIZATION AND AUTHENTICATION
+      // ------------------------------------
 
-        async function initFirebase() {
-            if (!firebaseConfig) {
-                console.error("Firebase configuration is missing. Cannot initialize Firestore.");
-                document.getElementById('messagesContainer').innerHTML = '<div class="text-center p-4 text-red-500">Guestbook is disabled: Firebase config missing.</div>';
-                return;
-            }
-
-            try {
-                const app = initializeApp(firebaseConfig);
-                db = getFirestore(app);
-                auth = getAuth(app);
-
-                // Authenticate user
-                if (initialAuthToken) {
-                    await signInWithCustomToken(auth, initialAuthToken);
-                } else {
-                    await signInAnonymously(auth);
-                }
-
-                userId = auth.currentUser?.uid || crypto.randomUUID();
-                console.log("Firebase initialized. User ID:", userId);
-
-                setupGuestbookListener();
-
-            } catch (error) {
-                console.error("Error initializing or authenticating Firebase:", error);
-                document.getElementById('messagesContainer').innerHTML = `<div class="text-center p-4 text-red-500">Error loading messages: ${error.message}</div>`;
-            }
+      async function initFirebase() {
+        if (!firebaseConfig) {
+          console.error(
+            "Firebase configuration is missing. Cannot initialize Firestore."
+          );
+          document.getElementById("messagesContainer").innerHTML =
+            '<div class="text-center p-4 text-red-500">Guestbook is disabled: Firebase config missing.</div>';
+          return;
         }
-        
-        // ------------------------------------
-        // GUESTBOOK REAL-TIME LISTENER (Read)
-        // ------------------------------------
 
-        function setupGuestbookListener() {
-            if (!db) return;
+        try {
+          const app = initializeApp(firebaseConfig);
+          db = getFirestore(app);
+          auth = getAuth(app);
 
-            const messagesRef = collection(db, GUESTBOOK_COLLECTION_PATH);
-            const q = query(messagesRef); 
+          // Authenticate user
+          if (initialAuthToken) {
+            await signInWithCustomToken(auth, initialAuthToken);
+          } else {
+            await signInAnonymously(auth);
+          }
 
-            onSnapshot(q, (snapshot) => {
-                const messages = [];
-                snapshot.forEach(doc => {
-                    const data = doc.data();
-                    messages.push({ 
-                        id: doc.id, 
-                        name: data.name || 'Anonymous', 
-                        message: data.message, 
-                        // Convert Firestore Timestamp to JS Date and handle missing timestamp
-                        timestamp: data.timestamp && typeof data.timestamp.toDate === 'function' ? data.timestamp.toDate() : new Date(0) 
-                    });
-                });
+          userId = auth.currentUser?.uid || crypto.randomUUID();
+          console.log("Firebase initialized. User ID:", userId);
 
-                // Sort messages by timestamp in descending order (newest first) client-side
-                messages.sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime());
+          setupGuestbookListener();
+        } catch (error) {
+          console.error(
+            "Error initializing or authenticating Firebase:",
+            error
+          );
+          document.getElementById(
+            "messagesContainer"
+          ).innerHTML = `<div class="text-center p-4 text-red-500">Error loading messages: ${error.message}</div>`;
+        }
+      }
 
-                renderGuestbook(messages);
+      // ------------------------------------
+      // GUESTBOOK REAL-TIME LISTENER (Read)
+      // ------------------------------------
 
-            }, (error) => {
-                console.error("Error setting up guestbook listener:", error);
-                document.getElementById('messagesContainer').innerHTML = `<div class="text-center p-4 text-red-500">Failed to load messages.</div>`;
+      function setupGuestbookListener() {
+        if (!db) return;
+
+        const messagesRef = collection(db, GUESTBOOK_COLLECTION_PATH);
+        const q = query(messagesRef);
+
+        onSnapshot(
+          q,
+          (snapshot) => {
+            const messages = [];
+            snapshot.forEach((doc) => {
+              const data = doc.data();
+              messages.push({
+                id: doc.id,
+                name: data.name || "Anonymous",
+                message: data.message,
+                // Convert Firestore Timestamp to JS Date and handle missing timestamp
+                timestamp:
+                  data.timestamp && typeof data.timestamp.toDate === "function"
+                    ? data.timestamp.toDate()
+                    : new Date(0),
+              });
             });
+
+            // Sort messages by timestamp in descending order (newest first) client-side
+            messages.sort(
+              (a, b) => b.timestamp.getTime() - a.timestamp.getTime()
+            );
+
+            renderGuestbook(messages);
+          },
+          (error) => {
+            console.error("Error setting up guestbook listener:", error);
+            document.getElementById(
+              "messagesContainer"
+            ).innerHTML = `<div class="text-center p-4 text-red-500">Failed to load messages.</div>`;
+          }
+        );
+      }
+
+      function renderGuestbook(messages) {
+        const container = document.getElementById("messagesContainer");
+        container.innerHTML = ""; // Clear existing messages
+
+        if (messages.length === 0) {
+          container.innerHTML =
+            '<div class="text-center p-4 text-gray-500 italic">Be the first to leave a message!</div>';
+          return;
         }
 
-        function renderGuestbook(messages) {
-            const container = document.getElementById('messagesContainer');
-            container.innerHTML = ''; // Clear existing messages
+        messages.forEach((msg) => {
+          const dateOptions = {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+          };
+          const formattedDate =
+            msg.timestamp.getFullYear() !== 1970
+              ? msg.timestamp.toLocaleDateString(undefined, dateOptions)
+              : "Just Now";
 
-            if (messages.length === 0) {
-                container.innerHTML = '<div class="text-center p-4 text-gray-500 italic">Be the first to leave a message!</div>';
-                return;
-            }
-
-            messages.forEach(msg => {
-                const dateOptions = { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-                const formattedDate = msg.timestamp.getFullYear() !== 1970 ? msg.timestamp.toLocaleDateString(undefined, dateOptions) : 'Just Now';
-
-                const messageDiv = document.createElement('div');
-                messageDiv.className = 'p-6 bg-white rounded-2xl shadow-xl border border-blush-500 transition duration-300 fade-in-element hover:shadow-2xl';
-                messageDiv.innerHTML = `
+          const messageDiv = document.createElement("div");
+          messageDiv.className =
+            "p-6 bg-white rounded-2xl shadow-xl border border-blush-500 transition duration-300 fade-in-element hover:shadow-2xl";
+          messageDiv.innerHTML = `
                     <p class="font-extrabold blush-text text-xl font-cursive">${msg.name}</p>
                     <p class="text-sm text-gray-500 mb-3">${formattedDate}</p>
                     <p class="text-gray-800 leading-relaxed">${msg.message}</p>
                 `;
-                container.appendChild(messageDiv);
-                
-                // Trigger fade-in visibility for new elements
-                setTimeout(() => messageDiv.classList.add('fade-in-visible'), 10);
-            });
-        }
-        
-        // ------------------------------------
-        // GUESTBOOK SUBMISSION (Write)
-        // ------------------------------------
+          container.appendChild(messageDiv);
 
-        document.getElementById('guestbookForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            if (!db) return;
+          // Trigger fade-in visibility for new elements
+          setTimeout(() => messageDiv.classList.add("fade-in-visible"), 10);
+        });
+      }
 
-            const nameInput = document.getElementById('guestNameGB');
-            const messageInput = document.getElementById('guestMessageGB');
-            const formMessage = document.getElementById('guestbookMessage');
+      // ------------------------------------
+      // GUESTBOOK SUBMISSION (Write)
+      // ------------------------------------
 
-            const name = nameInput.value.trim();
-            const message = messageInput.value.trim();
-            
-            if (!name || !message) {
-                formMessage.textContent = 'Please fill in both your name and message.';
-                formMessage.classList.remove('hidden', 'text-green-700');
-                formMessage.classList.add('text-red-700');
-                setTimeout(() => formMessage.classList.add('hidden'), 5000);
-                return;
-            }
+      document
+        .getElementById("guestbookForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          if (!db) return;
 
-            const newPost = {
-                name: name,
-                message: message,
-                timestamp: serverTimestamp() 
-            };
+          const nameInput = document.getElementById("guestNameGB");
+          const messageInput = document.getElementById("guestMessageGB");
+          const formMessage = document.getElementById("guestbookMessage");
 
-            try {
-                await addDoc(collection(db, GUESTBOOK_COLLECTION_PATH), newPost);
+          const name = nameInput.value.trim();
+          const message = messageInput.value.trim();
 
-                formMessage.textContent = 'Message posted successfully! Thank you.';
-                formMessage.classList.remove('hidden', 'text-red-700');
-                formMessage.classList.add('text-green-700');
-                
-                // Clear form inputs
-                nameInput.value = '';
-                messageInput.value = '';
+          if (!name || !message) {
+            formMessage.textContent =
+              "Please fill in both your name and message.";
+            formMessage.classList.remove("hidden", "text-green-700");
+            formMessage.classList.add("text-red-700");
+            setTimeout(() => formMessage.classList.add("hidden"), 5000);
+            return;
+          }
 
-                setTimeout(() => formMessage.classList.add('hidden'), 6000);
+          const newPost = {
+            name: name,
+            message: message,
+            timestamp: serverTimestamp(),
+          };
 
-            } catch (error) {
-                console.error("Error writing document: ", error);
-                formMessage.textContent = `Error: Failed to post message. ${error.message}`;
-                formMessage.classList.remove('hidden', 'text-green-700');
-                formMessage.classList.add('text-red-700');
-            }
+          try {
+            await addDoc(collection(db, GUESTBOOK_COLLECTION_PATH), newPost);
+
+            formMessage.textContent = "Message posted successfully! Thank you.";
+            formMessage.classList.remove("hidden", "text-red-700");
+            formMessage.classList.add("text-green-700");
+
+            // Clear form inputs
+            nameInput.value = "";
+            messageInput.value = "";
+
+            setTimeout(() => formMessage.classList.add("hidden"), 6000);
+          } catch (error) {
+            console.error("Error writing document: ", error);
+            formMessage.textContent = `Error: Failed to post message. ${error.message}`;
+            formMessage.classList.remove("hidden", "text-green-700");
+            formMessage.classList.add("text-red-700");
+          }
         });
 
-        // Initialize Firebase on window load
-        window.addEventListener('load', initFirebase);
+      // Initialize Firebase on window load
+      window.addEventListener("load", initFirebase);
     </script>
 
     <!-- Main JS for Countdown, Animations, Modals, and Copy Function -->
     <script>
-        // Function to copy text to clipboard and show success message
-        function copyText(textToCopy, messageId) {
-            const tempInput = document.createElement('textarea');
-            tempInput.value = textToCopy;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempInput);
-            
-            const messageElement = document.getElementById(messageId);
-            messageElement.classList.remove('hidden');
-            setTimeout(() => messageElement.classList.add('hidden'), 2000);
+      // Function to copy text to clipboard and show success message
+      function copyText(textToCopy, messageId) {
+        const tempInput = document.createElement("textarea");
+        tempInput.value = textToCopy;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+
+        const messageElement = document.getElementById(messageId);
+        messageElement.classList.remove("hidden");
+        setTimeout(() => messageElement.classList.add("hidden"), 2000);
+      }
+
+      // Make the copyText function globally available for onclick events
+      window.copyText = copyText;
+
+      // ------------------------------------
+      // COUNTDOWN TIMER
+      // ------------------------------------
+      function format(number) {
+        return number < 10 ? "0" + number : number;
+      }
+
+      const WEDDING_DATE = new Date("November 15, 2025 09:00:00").getTime();
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = WEDDING_DATE - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        if (distance < 0) {
+          clearInterval(countdownInterval);
+          document.getElementById("countdown").innerHTML =
+            '<p class="text-4xl text-gold-700 font-bold">We Are Married!</p>';
+        } else {
+          document.getElementById("days").textContent = format(days);
+          document.getElementById("hours").textContent = format(hours);
+          document.getElementById("minutes").textContent = format(minutes);
+          document.getElementById("seconds").textContent = format(seconds);
         }
+      }
 
-        // Make the copyText function globally available for onclick events
-        window.copyText = copyText;
+      const countdownInterval = setInterval(updateCountdown, 1000);
+      updateCountdown(); // Initial call to display immediately
 
-        // ------------------------------------
-        // COUNTDOWN TIMER
-        // ------------------------------------
-        function format(number) {
-            return number < 10 ? '0' + number : number;
-        }
+      // ------------------------------------
+      // INTERSECTION OBSERVER (Fade-In Animations)
+      // ------------------------------------
 
-        const WEDDING_DATE = new Date("November 15, 2025 09:00:00").getTime();
-
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = WEDDING_DATE - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            if (distance < 0) {
-                clearInterval(countdownInterval);
-                document.getElementById("countdown").innerHTML = '<p class="text-4xl text-gold-700 font-bold">We Are Married!</p>';
-            } else {
-                document.getElementById("days").textContent = format(days);
-                document.getElementById("hours").textContent = format(hours);
-                document.getElementById("minutes").textContent = format(minutes);
-                document.getElementById("seconds").textContent = format(seconds);
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("fade-in-visible");
+              observer.unobserve(entry.target);
             }
+          });
+        },
+        {
+          rootMargin: "0px",
+          threshold: 0.1, // Start animation when 10% of element is visible
         }
+      );
 
-        const countdownInterval = setInterval(updateCountdown, 1000);
-        updateCountdown(); // Initial call to display immediately
+      document.querySelectorAll(".fade-in-element").forEach((element) => {
+        observer.observe(element);
+      });
 
-        // ------------------------------------
-        // INTERSECTION OBSERVER (Fade-In Animations)
-        // ------------------------------------
-        
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in-visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            rootMargin: '0px',
-            threshold: 0.1 // Start animation when 10% of element is visible
+      // ------------------------------------
+      // MOBILE MENU LOGIC
+      // ------------------------------------
+      const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const navLinks = document.querySelectorAll("#main-nav a");
+
+      mobileMenuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("translate-x-full");
+      });
+
+      // Close mobile menu when a link is clicked
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("translate-x-full");
         });
+      });
 
-        document.querySelectorAll('.fade-in-element').forEach(element => {
-            observer.observe(element);
-        });
+      // Function to close mobile menu
+      function closeMobileMenu() {
+        mobileMenu.classList.add("translate-x-full");
+      }
 
-        // ------------------------------------
-        // MOBILE MENU LOGIC
-        // ------------------------------------
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.querySelectorAll('#main-nav a');
+      // Make closeMobileMenu globally available
+      window.closeMobileMenu = closeMobileMenu;
 
-        mobileMenuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('translate-x-full');
-        });
+      // ------------------------------------
+      // RSVP FORM DUMMY SUBMISSION
+      // ------------------------------------
+      document.getElementById("rsvpForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const messageDiv = document.getElementById("rsvpMessage");
 
-        // Close mobile menu when a link is clicked
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('translate-x-full');
-            });
-        });
+        // Dummy data submission for UI feedback
+        console.log("RSVP Submitted (Dummy Data)");
 
-        // Function to close mobile menu
-        function closeMobileMenu() {
-            mobileMenu.classList.add('translate-x-full');
-        }
+        messageDiv.textContent =
+          "Thank you! Your RSVP has been received. We can't wait to see you!";
+        messageDiv.classList.remove("hidden");
 
-        // Make closeMobileMenu globally available
-        window.closeMobileMenu = closeMobileMenu;
-        
-        // ------------------------------------
-        // RSVP FORM DUMMY SUBMISSION
-        // ------------------------------------
-        document.getElementById('rsvpForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const messageDiv = document.getElementById('rsvpMessage');
-            
-            // Dummy data submission for UI feedback
-            console.log("RSVP Submitted (Dummy Data)");
+        e.target.reset(); // Clear form
 
-            messageDiv.textContent = 'Thank you! Your RSVP has been received. We can\'t wait to see you!';
-            messageDiv.classList.remove('hidden');
-            
-            e.target.reset(); // Clear form
-            
-            setTimeout(() => messageDiv.classList.add('hidden'), 6000);
-        });
-        
-        // ------------------------------------
-        // MOBILE MONEY SIMULATOR FORM
-        // ------------------------------------
-        document.getElementById('mobileMoneyForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const senderName = document.getElementById('senderName').value.trim();
-            const amount = document.getElementById('amount').value;
-            const statusDiv = document.getElementById('momoStatus');
-            
-            if (!senderName || !amount) {
-                statusDiv.textContent = 'Please provide your name and the amount you wish to send.';
-                statusDiv.className = 'mt-8 p-4 rounded-xl text-center font-bold bg-red-100 text-red-700';
-                statusDiv.classList.remove('hidden');
-                setTimeout(() => statusDiv.classList.add('hidden'), 5000);
-                return;
-            }
-
-            // Simulated USSD Process
-            statusDiv.textContent = 'Initiating MTN Mobile Money transfer... A confirmation prompt will appear on your phone (simulated).';
-            statusDiv.className = 'mt-8 p-4 rounded-xl text-center font-bold bg-yellow-100 text-yellow-700';
-            statusDiv.classList.remove('hidden');
-
-            setTimeout(() => {
-                statusDiv.textContent = `Thank you, ${senderName}! We have received your generous gift of ${amount} RWF (simulated confirmation).`;
-                statusDiv.className = 'mt-8 p-4 rounded-xl text-center font-bold bg-green-100 text-green-700';
-                
-                // Clear form
-                document.getElementById('mobileMoneyForm').reset();
-                
-                setTimeout(() => statusDiv.classList.add('hidden'), 10000);
-            }, 3000); // Simulate network delay
-        });
+        setTimeout(() => messageDiv.classList.add("hidden"), 6000);
+      });
     </script>
-</body>
+  </body>
 </html>
